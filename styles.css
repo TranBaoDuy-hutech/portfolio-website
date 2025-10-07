@@ -1,15 +1,15 @@
 /* ==================== ROOT VARIABLES ==================== */
 :root {
-  --primary-gradient: linear-gradient(135deg, #1E3A8A 0%, #2DD4BF 100%); /* Deep sea blue to teal */
-  --secondary-gradient: linear-gradient(135deg, #2A6B8A 0%, #4FD1C5 100%); /* Blue-green complement */
-  --accent-gradient: linear-gradient(135deg, #38BDF8 0%, #A5F3FC 100%); /* Light aqua */
-  --dark-bg: #0C1A33; /* Deep sea blue background */
+  --primary-gradient: linear-gradient(135deg, #1E3A8A 0%, #4FD1C5 100%); /* Sea-blue gradient */
+  --secondary-gradient: linear-gradient(135deg, #F472B6 0%, #F87171 100%); /* Coral complement */
+  --accent-gradient: linear-gradient(135deg, #38BDF8 0%, #7DD3FC 100%); /* Lighter aqua */
+  --dark-bg: #2A6F97; /* Light sea blue background */
   --card-bg: rgba(255, 255, 255, 0.1);
-  --text-primary: #F0F9FF; /* Crisp white for contrast */
-  --text-secondary: rgba(255, 255, 255, 0.9);
-  --warning-color: #22D3EE; /* Cyan for buttons */
-  --shadow-lg: 0 20px 60px rgba(0, 0, 0, 0.5);
-  --shadow-hover: 0 25px 70px rgba(56, 189, 248, 0.6); /* Aqua shadow */
+  --text-primary: #F8FAFC; /* Crisp white for contrast */
+  --text-secondary: rgba(255, 255, 255, 0.85);
+  --warning-color: #FBBF24; /* Amber for buttons to stand out */
+  --shadow-lg: 0 20px 60px rgba(0, 0, 0, 0.3);
+  --shadow-hover: 0 25px 70px rgba(56, 189, 248, 0.6); /* Enhanced aqua shadow */
 }
 
 /* ==================== GLOBAL STYLES ==================== */
@@ -27,7 +27,7 @@ body {
   position: relative;
 }
 
-/* Animated Background with Parallax */
+/* Enhanced Animated Background with Parallax and Gradient Flow */
 body::before {
   content: '';
   position: fixed;
@@ -36,36 +36,38 @@ body::before {
   width: 100%;
   height: 100%;
   background: 
-    radial-gradient(circle at 15% 40%, rgba(56, 189, 248, 0.25) 0%, transparent 50%),
-    radial-gradient(circle at 85% 75%, rgba(45, 212, 191, 0.2) 0%, transparent 50%),
-    radial-gradient(circle at 45% 25%, rgba(165, 243, 252, 0.15) 0%, transparent 50%);
-  animation: backgroundShift 20s ease-in-out infinite, parallax 1s linear infinite;
+    radial-gradient(circle at 20% 40%, rgba(56, 189, 248, 0.3) 0%, transparent 50%),
+    radial-gradient(circle at 80% 60%, rgba(244, 114, 182, 0.25) 0%, transparent 50%),
+    linear-gradient(45deg, rgba(56, 189, 248, 0.2), rgba(79, 209, 197, 0.2));
+  animation: backgroundShift 20s ease-in-out infinite, parallax 0.8s linear infinite;
   z-index: -1;
-  will-change: transform;
+  will-change: transform, background;
 }
 
 @keyframes backgroundShift {
-  0%, 100% { transform: translateY(0) scale(1); }
-  50% { transform: translateY(-25px) scale(1.08); }
+  0%, 100% { transform: translateY(0) scale(1); background-position: 0% 50%; }
+  50% { transform: translateY(-50px) scale(1.15); background-position: 100% 50%; }
 }
 
 @keyframes parallax {
   0% { transform: translateY(0); }
-  100% { transform: translateY(-80px); }
+  100% { transform: translateY(-150px); }
 }
 
-/* Multi-Layered Wave Animation */
+/* Enhanced Wave Animation with Multi-Layer Waves */
 body::after {
   content: '';
   position: fixed;
   bottom: 0;
   left: 0;
   width: 100%;
-  height: 120px;
-  background: url('data:image/svg+xml;utf8,<svg viewBox="0 0 1200 120" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg"><path d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113.64,31.08,1200,40.55V0Z" fill="rgba(56,189,248,0.35)"/></svg>'),
-              url('data:image/svg+xml;utf8,<svg viewBox="0 0 1200 120" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg"><path d="M0,0V60c60,30,120,40,180,35,80-10,150-40,230-45C490,45,560,65,630,80c70,15,140,20,210,10,40-5,80-15,120-25C1080,30,1140,35,1200,40V0Z" fill="rgba(45,212,191,0.25)"/></svg>');
-  background-size: cover;
-  animation: wave 12s linear infinite;
+  height: 150px;
+  background: 
+    url('data:image/svg+xml;utf8,<svg viewBox="0 0 1200 120" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg"><path d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113.64,31.08,1200,40.55V0Z" fill="rgba(56,189,248,0.4)"/></svg>'),
+    url('data:image/svg+xml;utf8,<svg viewBox="0 0 1200 120" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg"><path d="M0,0V60c50,20,100,30,150,25,75-10,140-40,210-45,70,5,140,25,210,15,35-5,70-15,105-25,90-25,200-20,325,10V0Z" fill="rgba(79,209,197,0.3)"/></svg>');
+  background-size: cover, cover;
+  background-position: 0 0, 100px 20px;
+  animation: wave 12s linear infinite, waveSecondary 18s linear infinite;
   z-index: -1;
 }
 
@@ -74,28 +76,38 @@ body::after {
   100% { transform: translateX(-1200px); }
 }
 
-/* Floating Bubbles */
+@keyframes waveSecondary {
+  0% { background-position: 100px 20px; }
+  100% { background-position: -1100px 20px; }
+}
+
+/* Enhanced Floating Particles with Dynamic Scaling and Glow */
 .particle {
   position: fixed;
-  width: 5px;
-  height: 5px;
-  background: rgba(56, 189, 248, 0.5);
+  width: 8px;
+  height: 8px;
+  background: radial-gradient(circle, rgba(56, 189, 248, 0.6) 0%, transparent 70%);
   border-radius: 50%;
   pointer-events: none;
   z-index: 0;
-  animation: float 10s infinite ease-in-out;
-  box-shadow: 0 0 12px rgba(56, 189, 248, 0.6);
+  animation: float 15s infinite ease-in-out, glowPulse 2s infinite ease-in-out;
+  box-shadow: 0 0 15px rgba(56, 189, 248, 0.7);
 }
 
 @keyframes float {
-  0%, 100% { transform: translateY(0) translateX(0); opacity: 0.3; }
-  50% { opacity: 0.9; transform: translateY(-90vh) translateX(20px) scale(1.3); }
+  0%, 100% { transform: translateY(0) translateX(0) scale(1); opacity: 0.3; }
+  50% { transform: translateY(-90vh) translateX(40px) scale(1.5); opacity: 0.9; }
+}
+
+@keyframes glowPulse {
+  0%, 100% { box-shadow: 0 0 15px rgba(56, 189, 248, 0.7); }
+  50% { box-shadow: 0 0 25px rgba(56, 189, 248, 1); }
 }
 
 /* ==================== NAVBAR ==================== */
 .navbar {
-  background: rgba(12, 26, 51, 0.9);
-  backdrop-filter: blur(20px) saturate(140%);
+  background: rgba(42, 111, 151, 0.85);
+  backdrop-filter: blur(25px) saturate(140%);
   padding: 1rem 0;
   transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
@@ -103,7 +115,7 @@ body::after {
 }
 
 .navbar.scrolled {
-  background: rgba(12, 26, 51, 0.98);
+  background: rgba(42, 111, 151, 0.95);
   padding: 0.75rem 0;
   box-shadow: var(--shadow-lg);
 }
@@ -162,7 +174,7 @@ body::after {
   font-weight: 600;
   padding: 0.5rem 1.5rem;
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-  box-shadow: 0 4px 15px rgba(34, 211, 238, 0.5);
+  box-shadow: 0 4px 15px rgba(251, 191, 36, 0.5);
   margin-left: 1rem;
   position: relative;
   overflow: hidden;
@@ -171,28 +183,25 @@ body::after {
 #like-btn::after {
   content: '';
   position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 0;
-  height: 0;
-  background: rgba(255, 255, 255, 0.3);
-  border-radius: 50%;
-  transform: translate(-50%, -50%);
-  transition: width 0.5s ease, height 0.5s ease;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+  transition: left 0.5s ease;
 }
 
 #like-btn:hover::after {
-  width: 200px;
-  height: 200px;
+  left: 100%;
 }
 
 #like-btn:hover {
-  transform: perspective(500px) rotateY(8deg);
-  box-shadow: 0 6px 25px rgba(34, 211, 238, 0.7);
+  transform: perspective(600px) rotateY(12deg);
+  box-shadow: 0 8px 30px rgba(251, 191, 36, 0.7);
 }
 
 #like-btn:active {
-  transform: scale(0.95);
+  transform: scale(0.92);
 }
 
 /* ==================== HERO SECTION ==================== */
@@ -216,13 +225,13 @@ body::after {
   transform: translate(-50%, -50%);
   width: 800px;
   height: 800px;
-  background: radial-gradient(circle, rgba(56, 189, 248, 0.35) 0%, transparent 70%);
-  animation: pulse 6s ease-in-out infinite;
+  background: radial-gradient(circle, rgba(56, 189, 248, 0.4) 0%, transparent 65%);
+  animation: pulse 4s ease-in-out infinite;
 }
 
 @keyframes pulse {
-  0%, 100% { transform: translate(-50%, -50%) scale(1); opacity: 0.3; }
-  50% { transform: translate(-50%, -50%) scale(1.4); opacity: 0.6; }
+  0%, 100% { transform: translate(-50%, -50%) scale(1); opacity: 0.5; }
+  50% { transform: translate(-50%, -50%) scale(1.4); opacity: 0.8; }
 }
 
 #hero h1 {
@@ -233,7 +242,7 @@ body::after {
   animation: fadeInUp 1s ease-out;
   position: relative;
   z-index: 1;
-  text-shadow: 0 0 15px rgba(56, 189, 248, 0.7);
+  text-shadow: 0 0 20px rgba(56, 189, 248, 0.7);
 }
 
 #hero .lead {
@@ -256,13 +265,13 @@ body::after {
   border: none;
   padding: 1rem 3rem;
   font-weight: 600;
-  box-shadow: 0 8px 25px rgba(34, 211, 238, 0.5);
+  box-shadow: 0 8px 25px rgba(251, 191, 36, 0.5);
   transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 #hero .btn:hover {
-  transform: perspective(500px) translateY(-5px) rotateX(6deg);
-  box-shadow: 0 15px 40px rgba(34, 211, 238, 0.7);
+  transform: perspective(600px) translateY(-8px) rotateX(7deg);
+  box-shadow: 0 20px 50px rgba(251, 191, 36, 0.7);
 }
 
 /* ==================== SECTIONS ==================== */
@@ -283,6 +292,7 @@ section h2 {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
+  text-shadow: 0 0 15px rgba(56, 189, 248, 0.5);
 }
 
 section h2::after {
@@ -291,10 +301,10 @@ section h2::after {
   bottom: -12px;
   left: 50%;
   transform: translateX(-50%);
-  width: 100px;
-  height: 5px;
+  width: 120px;
+  height: 6px;
   background: var(--primary-gradient);
-  border-radius: 3px;
+  border-radius: 4px;
 }
 
 /* ==================== ABOUT SECTION ==================== */
@@ -311,7 +321,7 @@ section h2::after {
   background: var(--card-bg);
   backdrop-filter: blur(20px) saturate(160%);
   border: 1px solid rgba(255, 255, 255, 0.15);
-  border-radius: 20px;
+  border-radius: 25px;
   padding: 2rem;
   transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
   position: relative;
@@ -323,23 +333,20 @@ section h2::after {
 .skill-card::before {
   content: '';
   position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 0;
-  height: 0;
-  background: rgba(56, 189, 248, 0.3);
-  border-radius: 50%;
-  transform: translate(-50%, -50%);
-  transition: width 0.6s ease, height 0.6s ease;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(56, 189, 248, 0.25), transparent);
+  transition: left 0.6s ease;
 }
 
 .skill-card:hover::before {
-  width: 400px;
-  height: 400px;
+  left: 100%;
 }
 
 .skill-card:hover {
-  transform: perspective(1000px) translateY(-15px) rotateX(6deg);
+  transform: perspective(1200px) translateY(-20px) rotateX(7deg);
   box-shadow: var(--shadow-hover);
   border-color: rgba(56, 189, 248, 0.7);
   background: rgba(56, 189, 248, 0.15);
@@ -363,7 +370,7 @@ section h2::after {
   background: var(--card-bg);
   backdrop-filter: blur(20px) saturate(160%);
   border: 1px solid rgba(255, 255, 255, 0.15);
-  border-radius: 25px;
+  border-radius: 30px;
   transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
   position: relative;
   overflow: hidden;
@@ -377,7 +384,7 @@ section h2::after {
   right: -50%;
   width: 200%;
   height: 200%;
-  background: radial-gradient(circle, rgba(56, 189, 248, 0.2) 0%, transparent 70%);
+  background: radial-gradient(circle, rgba(56, 189, 248, 0.2) 0%, transparent 65%);
   opacity: 0;
   transition: opacity 0.5s ease;
 }
@@ -387,7 +394,7 @@ section h2::after {
 }
 
 .card:hover {
-  transform: perspective(1000px) translateY(-15px) rotateY(6deg);
+  transform: perspective(1200px) translateY(-20px) rotateY(7deg);
   box-shadow: var(--shadow-hover);
   border-color: rgba(56, 189, 248, 0.8);
 }
@@ -414,7 +421,7 @@ section h2::after {
 }
 
 .project-link:hover {
-  transform: scale(1.4) rotate(15deg);
+  transform: scale(1.5) rotate(25deg);
 }
 
 /* ==================== CERTIFICATES SECTION ==================== */
@@ -423,7 +430,7 @@ section h2::after {
 }
 
 #certificates .card:hover {
-  background: rgba(34, 211, 238, 0.15);
+  background: rgba(251, 191, 36, 0.15);
 }
 
 #certificates .btn-warning {
@@ -431,13 +438,13 @@ section h2::after {
 }
 
 #certificates .btn-warning:hover {
-  transform: perspective(500px) rotateX(8deg);
-  box-shadow: 0 8px 20px rgba(34, 211, 238, 0.6);
+  transform: perspective(600px) rotateX(12deg);
+  box-shadow: 0 10px 25px rgba(251, 191, 36, 0.6);
 }
 
 /* ==================== CONTACT SECTION ==================== */
 #contact {
-  background: linear-gradient(135deg, rgba(56, 189, 248, 0.15) 0%, rgba(45, 212, 191, 0.15) 100%);
+  background: linear-gradient(135deg, rgba(56, 189, 248, 0.15) 0%, rgba(42, 111, 151, 0.15) 100%);
   padding: 7rem 0;
 }
 
@@ -466,7 +473,7 @@ section h2::after {
 
 .contact-link:hover {
   color: var(--warning-color);
-  transform: translateX(8px);
+  transform: translateX(10px);
 }
 
 #contact .rounded {
@@ -476,13 +483,13 @@ section h2::after {
 
 #contact .rounded:hover {
   background: rgba(255, 255, 255, 0.15) !important;
-  transform: perspective(500px) translateY(-10px) rotateX(5deg);
-  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
+  transform: perspective(600px) translateY(-12px) rotateX(7deg);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.35);
 }
 
 /* ==================== FOOTER ==================== */
 footer {
-  background: rgba(12, 26, 51, 0.95);
+  background: rgba(42, 111, 151, 0.95);
   padding: 2.5rem 0;
   text-align: center;
   border-top: 1px solid rgba(255, 255, 255, 0.15);
@@ -491,7 +498,7 @@ footer {
 /* ==================== SCROLL EFFECTS ==================== */
 .fade-in {
   opacity: 0;
-  transform: translateY(40px);
+  transform: translateY(50px);
   transition: all 0.8s ease-out;
 }
 
@@ -503,7 +510,7 @@ footer {
 /* ==================== RESPONSIVE ==================== */
 @media (max-width: 768px) {
   #hero h1 {
-    font-size: 1.8rem;
+    font-size: 2rem;
   }
   
   section {
@@ -520,21 +527,17 @@ footer {
   }
 
   .skill-card, .card {
-    transform: perspective(500px) rotateX(0deg);
+    transform: perspective(600px) rotateX(0deg);
   }
 
   .skill-card:hover, .card:hover {
-    transform: translateY(-10px);
-  }
-
-  body::after {
-    height: 80px;
+    transform: translateY(-12px);
   }
 }
 
 /* ==================== SCROLL BAR ==================== */
 ::-webkit-scrollbar {
-  width: 12px;
+  width: 14px;
 }
 
 ::-webkit-scrollbar-track {
@@ -543,7 +546,7 @@ footer {
 
 ::-webkit-scrollbar-thumb {
   background: var(--primary-gradient);
-  border-radius: 6px;
+  border-radius: 7px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
@@ -554,7 +557,7 @@ footer {
 @keyframes slideInLeft {
   from {
     opacity: 0;
-    transform: translateX(-60px);
+    transform: translateX(-80px);
   }
   to {
     opacity: 1;
@@ -565,7 +568,7 @@ footer {
 @keyframes slideInRight {
   from {
     opacity: 0;
-    transform: translateX(60px);
+    transform: translateX(80px);
   }
   to {
     opacity: 1;
@@ -576,7 +579,7 @@ footer {
 @keyframes scaleIn {
   from {
     opacity: 0;
-    transform: scale(0.7);
+    transform: scale(0.6);
   }
   to {
     opacity: 1;
@@ -600,25 +603,26 @@ footer {
   border-radius: 50%;
   background: rgba(255, 255, 255, 0.3);
   transform: translate(-50%, -50%);
-  transition: width 0.7s, height 0.7s;
+  transition: width 0.6s, height 0.6s;
 }
 
 .btn:hover::before {
-  width: 400px;
-  height: 400px;
+  width: 500px;
+  height: 500px;
 }
 
-/* ==================== TEXT GLOW EFFECT ==================== */
+/* ==================== ENHANCED TEXT GLOW EFFECT ==================== */
 .glow-text {
-  text-shadow: 0 0 12px rgba(56, 189, 248, 0.7),
-               0 0 24px rgba(56, 189, 248, 0.5),
-               0 0 36px rgba(56, 189, 248, 0.4);
+  text-shadow: 
+    0 0 15px rgba(56, 189, 248, 0.7),
+    0 0 30px rgba(56, 189, 248, 0.5),
+    0 0 50px rgba(56, 189, 248, 0.4);
 }
 
-/* ==================== GLASSMORPHISM EFFECT ==================== */
+/* ==================== ENHANCED GLASSMORPHISM EFFECT ==================== */
 .glass {
   background: rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(20px) saturate(160%);
   border: 1px solid rgba(255, 255, 255, 0.15);
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.35);
 }

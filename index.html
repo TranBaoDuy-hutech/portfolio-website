@@ -44,12 +44,11 @@
 
 <!-- Hero Section -->
 <section id="hero">
-  <h1 class="display-3 fw-bold mb-3">TRAN BAO DUY</h1>
-  <p class="lead mb-2">Software Engineering Student at HUTECH</p>
-  <p class="text-muted mb-4">Web & Mobile Developer | Seeking internships in Fullstack development with experience in .NET web development and Flutter mobile development. Eager to apply knowledge to real projects and contribute to valuable products.</p>
-  <a href="#contact" class="btn btn-warning btn-lg">Get In Touch</a>
-
-</section>
+    <h1 class="display-3 fw-bold mb-3 typing-text" data-text="TRAN BAO DUY"></h1>
+    <p class="lead mb-2 typing-text" data-text="Software Engineering Student at HUTECH"></p>
+    <p class="text-muted mb-4 typing-text" data-text="Web & Mobile Developer | Seeking internships in Fullstack development with experience in .NET web development and Flutter mobile development. Eager to apply knowledge to real projects and contribute to valuable products."></p>
+    <a href="#contact" class="btn btn-warning btn-lg">Get In Touch</a>
+  </section>
 
 <!-- About Section -->
 <section id="about" class="container" data-aos="fade-up">
@@ -549,6 +548,32 @@
     }
 
   });
+
+ document.addEventListener('DOMContentLoaded', () => {
+  const typingElements = document.querySelectorAll('#hero .typing-text');
+
+  typingElements.forEach((element, index) => {
+    // Xóa nội dung ban đầu để tránh hiển thị trước khi gõ
+    element.innerHTML = '';
+    const text = element.getAttribute('data-text');
+    let charIndex = 0;
+
+    function type() {
+      if (charIndex < text.length) {
+        // Thêm ký tự vào thẻ span với delay animation cho slide up
+        element.innerHTML += `<span style="animation-delay: ${charIndex * 0.05}s">${text.charAt(charIndex)}</span>`;
+        charIndex++;
+        setTimeout(type, 50); // Tốc độ gõ: 50ms/ký tự
+      } else {
+        // Tắt con trỏ nhấp nháy khi gõ xong
+        element.style.borderRight = 'none';
+      }
+    }
+
+    // Bắt đầu gõ với độ trễ để các phần tử xuất hiện tuần tự
+    setTimeout(type, index * 1500); // <h1>: 0s, <p.lead>: 1.5s, <p.muted>: 3s
+  });
+});
 </script>
 
 </body>
