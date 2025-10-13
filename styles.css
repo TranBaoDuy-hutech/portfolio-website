@@ -640,14 +640,16 @@ footer p {
 /* ==================== RESPONSIVE ==================== */
 @media (max-width: 992px) {
   #hero {
-    padding: 100px 5% 60px;
+    padding: 60px 5% 60px; /* Giảm padding-top để tiết kiệm không gian */
     text-align: center;
     min-height: auto;
   }
   
   .hero-container {
-    flex-direction: column-reverse;
-    gap: 50px;
+    flex-direction: column; /* Đổi thành column để avatar ở trên */
+    gap: 30px; /* Giảm gap */
+    max-width: 90%;
+    margin: 0 auto;
   }
   
   .hero-content {
@@ -657,10 +659,15 @@ footer p {
   .hero-content .description {
     margin-left: auto;
     margin-right: auto;
+    max-width: 100%;
   }
   
   .hero-buttons {
     justify-content: center;
+  }
+  
+  .hero-avatar {
+    margin: 0 auto; /* Căn giữa avatar */
   }
   
   .skills {
@@ -706,6 +713,16 @@ footer p {
     margin-left: 0;
     margin-top: 10px;
     width: 100%;
+  }
+  
+  #hero {
+    padding: 40px 3% 50px; /* Giảm padding thêm */
+  }
+  
+  .hero-container {
+    flex-direction: column; /* Đảm bảo avatar ở trên */
+    gap: 20px;
+    max-width: 95%;
   }
   
   .hero-content .name {
@@ -777,22 +794,68 @@ footer p {
 }
 
 @media (max-width: 480px) {
+  #hero {
+    padding: 30px 3% 40px;
+  }
+  
+  .hero-container {
+    flex-direction: column; /* Đảm bảo avatar ở trên */
+    gap: 15px;
+  }
+  
   .hero-content .name {
     font-size: 1.8rem;
   }
+  
+  .hero-content .role {
+    font-size: 1.1rem;
+  }
+  
+  .hero-content .intro,
+  .hero-content .description {
+    font-size: 0.95rem;
+  }
+  
+  .avatar-circle {
+    width: 180px;
+    height: 180px;
+  }
+  
+  .skills {
+    width: 260px;
+    height: 260px;
+    margin-left: -130px;
+    margin-top: -130px;
+  }
+  
+  .skill {
+    font-size: 0.65rem;
+    padding: 4px 6px;
+  }
+  
+  .skill:nth-child(1) { transform: rotate(0deg) translate(120px) rotate(0deg); }
+  .skill:nth-child(2) { transform: rotate(45deg) translate(120px) rotate(-45deg); }
+  .skill:nth-child(3) { transform: rotate(90deg) translate(120px) rotate(-90deg); }
+  .skill:nth-child(4) { transform: rotate(135deg) translate(120px) rotate(-135deg); }
+  .skill:nth-child(5) { transform: rotate(180deg) translate(120px) rotate(-180deg); }
+  .skill:nth-child(6) { transform: rotate(225deg) translate(120px) rotate(-225deg); }
+  .skill:nth-child(7) { transform: rotate(270deg) translate(120px) rotate(-270deg); }
+  .skill:nth-child(8) { transform: rotate(315deg) translate(120px) rotate(-315deg); }
   
   section h2 {
     font-size: 1.6rem;
   }
 }
+
 @media (max-width: 360px) {
   #hero {
-    padding: 20px 2% 40px; /* Giảm padding hơn nữa */
+    padding: 20px 2% 30px; /* Giảm padding hơn nữa */
   }
 
   .hero-container {
+    flex-direction: column; /* Đảm bảo avatar ở trên */
+    gap: 10px;
     max-width: 100%;
-    gap: 30px;
   }
 
   .hero-content .name {
@@ -809,35 +872,35 @@ footer p {
   }
 
   .avatar-circle {
-    width: 180px;
-    height: 180px;
+    width: 160px;
+    height: 160px;
   }
 
   .skills {
-    width: 260px;
-    height: 260px;
-    margin-left: -130px;
-    margin-top: -130px;
+    width: 220px;
+    height: 220px;
+    margin-left: -110px;
+    margin-top: -110px;
   }
 
   .skill {
-    font-size: 0.65rem;
-    padding: 4px 6px;
+    font-size: 0.6rem;
+    padding: 3px 5px;
   }
 
-  .skill:nth-child(1) { transform: rotate(0deg) translate(120px) rotate(0deg); }
-  .skill:nth-child(2) { transform: rotate(45deg) translate(120px) rotate(-45deg); }
-  .skill:nth-child(3) { transform: rotate(90deg) translate(120px) rotate(-90deg); }
-  .skill:nth-child(4) { transform: rotate(135deg) translate(120px) rotate(-135deg); }
-  .skill:nth-child(5) { transform: rotate(180deg) translate(120px) rotate(-180deg); }
-  .skill:nth-child(6) { transform: rotate(225deg) translate(120px) rotate(-225deg); }
-  .skill:nth-child(7) { transform: rotate(270deg) translate(120px) rotate(-270deg); }
-  .skill:nth-child(8) { transform: rotate(315deg) translate(120px) rotate(-315deg); }
+  .skill:nth-child(1) { transform: rotate(0deg) translate(100px) rotate(0deg); }
+  .skill:nth-child(2) { transform: rotate(45deg) translate(100px) rotate(-45deg); }
+  .skill:nth-child(3) { transform: rotate(90deg) translate(100px) rotate(-90deg); }
+  .skill:nth-child(4) { transform: rotate(135deg) translate(100px) rotate(-135deg); }
+  .skill:nth-child(5) { transform: rotate(180deg) translate(100px) rotate(-180deg); }
+  .skill:nth-child(6) { transform: rotate(225deg) translate(100px) rotate(-225deg); }
+  .skill:nth-child(7) { transform: rotate(270deg) translate(100px) rotate(-270deg); }
+  .skill:nth-child(8) { transform: rotate(315deg) translate(100px) rotate(-315deg); }
 
   .btn-contact,
   .btn-download {
-    padding: 10px 20px;
-    font-size: 0.9rem;
+    padding: 8px 15px;
+    font-size: 0.85rem;
   }
 
   section {
@@ -846,5 +909,68 @@ footer p {
 
   section h2 {
     font-size: 1.4rem;
+  }
+}
+
+/* Thêm media query cho chế độ landscape trên màn hình nhỏ */
+@media (max-width: 768px) and (orientation: landscape) {
+  #hero {
+    padding: 20px 3% 30px;
+  }
+  
+  .hero-container {
+    flex-direction: column; /* Đảm bảo avatar ở trên */
+    gap: 15px;
+    max-width: 95%;
+  }
+  
+  .hero-content .name {
+    font-size: 1.8rem;
+  }
+  
+  .hero-content .role {
+    font-size: 1.1rem;
+  }
+  
+  .hero-content .intro,
+  .hero-content .description {
+    font-size: 0.95rem;
+  }
+  
+  .avatar-circle {
+    width: 160px;
+    height: 160px;
+  }
+  
+  .skills {
+    width: 240px;
+    height: 240px;
+    margin-left: -120px;
+    margin-top: -120px;
+  }
+  
+  .skill {
+    font-size: 0.65rem;
+    padding: 4px 6px;
+  }
+  
+  .skill:nth-child(1) { transform: rotate(0deg) translate(110px) rotate(0deg); }
+  .skill:nth-child(2) { transform: rotate(45deg) translate(110px) rotate(-45deg); }
+  .skill:nth-child(3) { transform: rotate(90deg) translate(110px) rotate(-90deg); }
+  .skill:nth-child(4) { transform: rotate(135deg) translate(110px) rotate(-135deg); }
+  .skill:nth-child(5) { transform: rotate(180deg) translate(110px) rotate(-180deg); }
+  .skill:nth-child(6) { transform: rotate(225deg) translate(110px) rotate(-225deg); }
+  .skill:nth-child(7) { transform: rotate(270deg) translate(110px) rotate(-270deg); }
+  .skill:nth-child(8) { transform: rotate(315deg) translate(110px) rotate(-315deg); }
+  
+  .hero-buttons {
+    flex-direction: row;
+    gap: 10px;
+  }
+  
+  .btn-contact,
+  .btn-download {
+    padding: 8px 15px;
+    font-size: 0.85rem;
   }
 }
