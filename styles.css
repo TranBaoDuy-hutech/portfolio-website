@@ -75,7 +75,7 @@ body::before {
 }
 
 .navbar.scrolled {
-  background: rgba(255, 255, 255, 0.98);
+  background: rgba(110, 178, 255, 0.98);
   padding: 0.75rem 0;
   box-shadow: var(--shadow-md);
 }
@@ -132,7 +132,7 @@ body::before {
   padding: 0.5rem 1.25rem;
   transition: var(--transition);
   box-shadow: 0 4px 12px rgba(251, 191, 36, 0.3);
-  color: white;
+  color: rgb(255, 0, 0);
 }
 
 #like-btn:hover {
@@ -638,17 +638,20 @@ footer p {
 .card:nth-child(4) { animation-delay: 0.4s; }
 
 /* ==================== RESPONSIVE ==================== */
-@media (max-width: 992px) {
+/* Media query cho màn hình nhỏ hơn 1200px */
+@media (max-width: 1200px) {
   #hero {
-    padding: 60px 5% 60px; /* Giảm padding-top để tiết kiệm không gian */
-    text-align: center;
+    padding: 60px 5% 60px;
     min-height: auto;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
   }
   
   .hero-container {
-    flex-direction: column; /* Đổi thành column để avatar ở trên */
-    gap: 30px; /* Giảm gap */
-    max-width: 90%;
+    flex-direction: column; /* Đặt avatar ở trên */
+    gap: 30px;
+    max-width: 960px;
     margin: 0 auto;
   }
   
@@ -659,15 +662,81 @@ footer p {
   .hero-content .description {
     margin-left: auto;
     margin-right: auto;
-    max-width: 100%;
+    max-width: 80%;
   }
   
   .hero-buttons {
     justify-content: center;
+    gap: 12px;
   }
   
   .hero-avatar {
     margin: 0 auto; /* Căn giữa avatar */
+  }
+  
+  .skills {
+    width: 360px;
+    height: 360px;
+    margin-left: -180px;
+    margin-top: -180px;
+  }
+  
+  .skill {
+    font-size: 0.8rem;
+    padding: 6px 12px;
+  }
+  
+  .skill:nth-child(1) { transform: rotate(0deg) translate(160px) rotate(0deg); }
+  .skill:nth-child(2) { transform: rotate(45deg) translate(160px) rotate(-45deg); }
+  .skill:nth-child(3) { transform: rotate(90deg) translate(160px) rotate(-90deg); }
+  .skill:nth-child(4) { transform: rotate(135deg) translate(160px) rotate(-135deg); }
+  .skill:nth-child(5) { transform: rotate(180deg) translate(160px) rotate(-180deg); }
+  .skill:nth-child(6) { transform: rotate(225deg) translate(160px) rotate(-225deg); }
+  .skill:nth-child(7) { transform: rotate(270deg) translate(160px) rotate(-270deg); }
+  .skill:nth-child(8) { transform: rotate(315deg) translate(160px) rotate(-315deg); }
+  
+  .hero-content .name {
+    font-size: 3rem;
+  }
+  
+  .hero-content .role {
+    font-size: 1.5rem;
+  }
+  
+  section h2 {
+    font-size: 2.2rem;
+  }
+}
+
+/* Media query cho màn hình nhỏ hơn 992px */
+@media (max-width: 992px) {
+  #hero {
+    padding: 50px 4% 50px;
+    text-align: center;
+  }
+  
+  .hero-container {
+    flex-direction: column; /* Đảm bảo avatar ở trên */
+    gap: 25px;
+    max-width: 90%;
+  }
+  
+  .hero-content .name {
+    font-size: 2.8rem;
+  }
+  
+  .hero-content .role {
+    font-size: 1.4rem;
+  }
+  
+  .hero-content .intro,
+  .hero-content .description {
+    font-size: 1.05rem;
+  }
+  
+  .avatar-circle {
+    width: 240px;
+    height: 240px;
   }
   
   .skills {
@@ -691,19 +760,12 @@ footer p {
   .skill:nth-child(7) { transform: rotate(270deg) translate(150px) rotate(-270deg); }
   .skill:nth-child(8) { transform: rotate(315deg) translate(150px) rotate(-315deg); }
   
-  .hero-content .name {
-    font-size: 2.8rem;
-  }
-  
-  .hero-content .role {
-    font-size: 1.4rem;
-  }
-  
   section h2 {
     font-size: 2rem;
   }
 }
 
+/* Media query cho màn hình nhỏ hơn 768px */
 @media (max-width: 768px) {
   .navbar-brand {
     font-size: 1.3rem;
@@ -716,7 +778,7 @@ footer p {
   }
   
   #hero {
-    padding: 40px 3% 50px; /* Giảm padding thêm */
+    padding: 40px 3% 40px;
   }
   
   .hero-container {
@@ -733,10 +795,7 @@ footer p {
     font-size: 1.2rem;
   }
   
-  .hero-content .intro {
-    font-size: 1rem;
-  }
-  
+  .hero-content .intro,
   .hero-content .description {
     font-size: 1rem;
   }
@@ -750,18 +809,20 @@ footer p {
   .btn-download {
     width: 100%;
     justify-content: center;
+    padding: 10px 20px;
+    font-size: 0.95rem;
   }
   
   .avatar-circle {
-    width: 220px;
-    height: 220px;
+    width: 200px;
+    height: 200px;
   }
   
   .skills {
-    width: 300px;
-    height: 300px;
-    margin-left: -150px;
-    margin-top: -150px;
+    width: 280px;
+    height: 280px;
+    margin-left: -140px;
+    margin-top: -140px;
   }
   
   .skill {
@@ -769,22 +830,22 @@ footer p {
     padding: 5px 8px;
   }
   
-  .skill:nth-child(1) { transform: rotate(0deg) translate(140px) rotate(0deg); }
-  .skill:nth-child(2) { transform: rotate(45deg) translate(140px) rotate(-45deg); }
-  .skill:nth-child(3) { transform: rotate(90deg) translate(140px) rotate(-90deg); }
-  .skill:nth-child(4) { transform: rotate(135deg) translate(140px) rotate(-135deg); }
-  .skill:nth-child(5) { transform: rotate(180deg) translate(140px) rotate(-180deg); }
-  .skill:nth-child(6) { transform: rotate(225deg) translate(140px) rotate(-225deg); }
-  .skill:nth-child(7) { transform: rotate(270deg) translate(140px) rotate(-270deg); }
-  .skill:nth-child(8) { transform: rotate(315deg) translate(140px) rotate(-315deg); }
+  .skill:nth-child(1) { transform: rotate(0deg) translate(130px) rotate(0deg); }
+  .skill:nth-child(2) { transform: rotate(45deg) translate(130px) rotate(-45deg); }
+  .skill:nth-child(3) { transform: rotate(90deg) translate(130px) rotate(-90deg); }
+  .skill:nth-child(4) { transform: rotate(135deg) translate(130px) rotate(-135deg); }
+  .skill:nth-child(5) { transform: rotate(180deg) translate(130px) rotate(-180deg); }
+  .skill:nth-child(6) { transform: rotate(225deg) translate(130px) rotate(-225deg); }
+  .skill:nth-child(7) { transform: rotate(270deg) translate(130px) rotate(-270deg); }
+  .skill:nth-child(8) { transform: rotate(315deg) translate(130px) rotate(-315deg); }
   
   section {
-    padding: 60px 0;
+    padding: 50px 0;
   }
   
   section h2 {
     font-size: 1.8rem;
-    margin-bottom: 35px;
+    margin-bottom: 30px;
   }
   
   .skill-card,
@@ -793,14 +854,16 @@ footer p {
   }
 }
 
+/* Media query cho màn hình nhỏ hơn 480px */
 @media (max-width: 480px) {
   #hero {
-    padding: 30px 3% 40px;
+    padding: 30px 3% 30px;
   }
   
   .hero-container {
     flex-direction: column; /* Đảm bảo avatar ở trên */
     gap: 15px;
+    max-width: 100%;
   }
   
   .hero-content .name {
@@ -842,52 +905,59 @@ footer p {
   .skill:nth-child(7) { transform: rotate(270deg) translate(120px) rotate(-270deg); }
   .skill:nth-child(8) { transform: rotate(315deg) translate(120px) rotate(-315deg); }
   
+  .btn-contact,
+  .btn-download {
+    padding: 8px 15px;
+    font-size: 0.9rem;
+  }
+  
   section h2 {
     font-size: 1.6rem;
   }
 }
 
+/* Media query cho màn hình nhỏ hơn 360px */
 @media (max-width: 360px) {
   #hero {
-    padding: 20px 2% 30px; /* Giảm padding hơn nữa */
+    padding: 20px 2% 20px;
   }
-
+  
   .hero-container {
     flex-direction: column; /* Đảm bảo avatar ở trên */
     gap: 10px;
     max-width: 100%;
   }
-
+  
   .hero-content .name {
-    font-size: 1.5rem; /* Giảm kích thước chữ */
+    font-size: 1.5rem;
   }
-
+  
   .hero-content .role {
     font-size: 1rem;
   }
-
+  
   .hero-content .intro,
   .hero-content .description {
     font-size: 0.9rem;
   }
-
+  
   .avatar-circle {
     width: 160px;
     height: 160px;
   }
-
+  
   .skills {
     width: 220px;
     height: 220px;
     margin-left: -110px;
     margin-top: -110px;
   }
-
+  
   .skill {
     font-size: 0.6rem;
     padding: 3px 5px;
   }
-
+  
   .skill:nth-child(1) { transform: rotate(0deg) translate(100px) rotate(0deg); }
   .skill:nth-child(2) { transform: rotate(45deg) translate(100px) rotate(-45deg); }
   .skill:nth-child(3) { transform: rotate(90deg) translate(100px) rotate(-90deg); }
@@ -896,26 +966,92 @@ footer p {
   .skill:nth-child(6) { transform: rotate(225deg) translate(100px) rotate(-225deg); }
   .skill:nth-child(7) { transform: rotate(270deg) translate(100px) rotate(-270deg); }
   .skill:nth-child(8) { transform: rotate(315deg) translate(100px) rotate(-315deg); }
-
+  
   .btn-contact,
   .btn-download {
-    padding: 8px 15px;
+    padding: 8px 12px;
     font-size: 0.85rem;
   }
-
+  
   section {
     padding: 40px 0;
   }
-
+  
   section h2 {
     font-size: 1.4rem;
   }
 }
 
-/* Thêm media query cho chế độ landscape trên màn hình nhỏ */
+/* Media query cho màn hình nhỏ hơn 320px */
+@media (max-width: 320px) {
+  #hero {
+    padding: 15px 2% 15px;
+  }
+  
+  .hero-container {
+    flex-direction: column; /* Đảm bảo avatar ở trên */
+    gap: 8px;
+    max-width: 100%;
+  }
+  
+  .hero-content .name {
+    font-size: 1.3rem;
+  }
+  
+  .hero-content .role {
+    font-size: 0.9rem;
+  }
+  
+  .hero-content .intro,
+  .hero-content .description {
+    font-size: 0.85rem;
+  }
+  
+  .avatar-circle {
+    width: 140px;
+    height: 140px;
+  }
+  
+  .skills {
+    width: 200px;
+    height: 200px;
+    margin-left: -100px;
+    margin-top: -100px;
+  }
+  
+  .skill {
+    font-size: 0.55rem;
+    padding: 3px 4px;
+  }
+  
+  .skill:nth-child(1) { transform: rotate(0deg) translate(90px) rotate(0deg); }
+  .skill:nth-child(2) { transform: rotate(45deg) translate(90px) rotate(-45deg); }
+  .skill:nth-child(3) { transform: rotate(90deg) translate(90px) rotate(-90deg); }
+  .skill:nth-child(4) { transform: rotate(135deg) translate(90px) rotate(-135deg); }
+  .skill:nth-child(5) { transform: rotate(180deg) translate(90px) rotate(-180deg); }
+  .skill:nth-child(6) { transform: rotate(225deg) translate(90px) rotate(-225deg); }
+  .skill:nth-child(7) { transform: rotate(270deg) translate(90px) rotate(-270deg); }
+  .skill:nth-child(8) { transform: rotate(315deg) translate(90px) rotate(-315deg); }
+  
+  .btn-contact,
+  .btn-download {
+    padding: 7px 10px;
+    font-size: 0.8rem;
+  }
+  
+  section {
+    padding: 30px 0;
+  }
+  
+  section h2 {
+    font-size: 1.3rem;
+  }
+}
+
+/* Media query cho chế độ landscape trên màn hình nhỏ */
 @media (max-width: 768px) and (orientation: landscape) {
   #hero {
-    padding: 20px 3% 30px;
+    padding: 20px 3% 20px;
   }
   
   .hero-container {
@@ -970,7 +1106,15 @@ footer p {
   
   .btn-contact,
   .btn-download {
-    padding: 8px 15px;
+    padding: 8px 12px;
     font-size: 0.85rem;
+  }
+  
+  section {
+    padding: 40px 0;
+  }
+  
+  section h2 {
+    font-size: 1.6rem;
   }
 }
