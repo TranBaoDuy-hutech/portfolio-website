@@ -785,3 +785,66 @@ footer p {
     font-size: 1.6rem;
   }
 }
+@media (max-width: 360px) {
+  #hero {
+    padding: 20px 2% 40px; /* Giảm padding hơn nữa */
+  }
+
+  .hero-container {
+    max-width: 100%;
+    gap: 30px;
+  }
+
+  .hero-content .name {
+    font-size: 1.5rem; /* Giảm kích thước chữ */
+  }
+
+  .hero-content .role {
+    font-size: 1rem;
+  }
+
+  .hero-content .intro,
+  .hero-content .description {
+    font-size: 0.9rem;
+  }
+
+  .avatar-circle {
+    width: 180px;
+    height: 180px;
+  }
+
+  .skills {
+    width: 260px;
+    height: 260px;
+    margin-left: -130px;
+    margin-top: -130px;
+  }
+
+  .skill {
+    font-size: 0.65rem;
+    padding: 4px 6px;
+  }
+
+  .skill:nth-child(1) { transform: rotate(0deg) translate(120px) rotate(0deg); }
+  .skill:nth-child(2) { transform: rotate(45deg) translate(120px) rotate(-45deg); }
+  .skill:nth-child(3) { transform: rotate(90deg) translate(120px) rotate(-90deg); }
+  .skill:nth-child(4) { transform: rotate(135deg) translate(120px) rotate(-135deg); }
+  .skill:nth-child(5) { transform: rotate(180deg) translate(120px) rotate(-180deg); }
+  .skill:nth-child(6) { transform: rotate(225deg) translate(120px) rotate(-225deg); }
+  .skill:nth-child(7) { transform: rotate(270deg) translate(120px) rotate(-270deg); }
+  .skill:nth-child(8) { transform: rotate(315deg) translate(120px) rotate(-315deg); }
+
+  .btn-contact,
+  .btn-download {
+    padding: 10px 20px;
+    font-size: 0.9rem;
+  }
+
+  section {
+    padding: 40px 0;
+  }
+
+  section h2 {
+    font-size: 1.4rem;
+  }
+}
