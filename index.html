@@ -32,8 +32,6 @@
         <li class="nav-item"><a class="nav-link" href="#certificates">Certificates</a></li>
         <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
       </ul>
-
-      <!-- ❤️ Nút Like đặt ở cuối navbar -->
       <div class="ms-3 d-flex align-items-center">
         <button id="like-btn" class="btn btn-outline-light btn-sm" style="font-size:18px;">❤️</button>
         <span id="like-count" class="ms-2" style="font-size:18px;">0</span>
@@ -43,23 +41,68 @@
 </nav>
 
 <!-- Hero Section -->
-<section id="hero" class="text-center py-5">
-  <img src="images/avt1.jpg" alt="Avatar" class="hero-avatar mb-3">
-  <h1 class="display-3 fw-bold mb-3 typing-text" data-text="TRAN BAO DUY"></h1>
-  <p class="lead mb-2 typing-text" data-text="Software Engineering Student at HUTECH"></p>
-  <p class="text-muted mb-4 typing-text" data-text="Web & Mobile Developer | Seeking internships in Fullstack development with experience in .NET web development and Flutter mobile development. Eager to apply knowledge to real projects and contribute to valuable products."></p>
-  <a href="#contact" class="btn btn-warning btn-lg">Get In Touch</a>
+<section id="hero">
+  <div class="hero-container">
+  <!-- Left content -->
+  <div class="hero-content">
+    <p class="intro typing" data-text="Hello, I'm">Hello, I'm</p>
+    <h1 class="name typing" data-text="Tran Bao Duy">Tran Bao Duy</h1>
+    <h2 class="role typing"></h2>
+    <p class="description typing" data-text="Web & Mobile Developer | Seeking internships in Fullstack development with experience in .NET web development and Flutter mobile development. Eager to apply knowledge to real projects and contribute to valuable products.">
+      Web & Mobile Developer | Seeking internships in Fullstack development with experience in .NET web development and Flutter mobile development. Eager to apply knowledge to real projects and contribute to valuable products.
+    </p>
+
+    <div class="hero-buttons">
+      <a href="#contact" class="btn-contact">Contact Me</a>
+      <a href="TRANBAODUY_CV.pdf" class="btn-download">Download Resume</a>
+    </div>
+  </div>
+</div>
+
+
+    <!-- Right avatar -->
+    <div class="hero-avatar">
+      <div class="avatar-circle">
+        <img src="images/avt1.jpg" alt="Avatar" class="avatar-img">
+        <ul class="skills">
+          <li class="skill">C#</li>
+          <li class="skill">Java</li>
+          <li class="skill">Python</li>
+          <li class="skill">JavaScript</li>
+          <li class="skill">.NET</li>
+          <li class="skill">Flutter</li>
+          <li class="skill">SQL</li>
+          <li class="skill">API</li>
+        </ul>
+      </div>
+    </div>
+  </div>
 </section>
+
 
 <!-- About Section -->
 <section id="about" class="container" data-aos="fade-up">
   <h2 class="fw-bold text-center">About Me</h2>
   <div class="row justify-content-center">
     <div class="col-lg-9">
-      <p class="text-center fs-5">I'm a final-year Software Engineering student at Ho Chi Minh City University of Technology (HUTECH), specializing in Full-stack Development with expertise in .NET for web applications and Flutter for mobile development. I'm passionate about creating innovative, user-centric solutions and continuously exploring new technologies to enhance my skills. I'm eager to apply my knowledge to real-world projects, collaborate with professional teams, and contribute to building valuable and scalable products. My long-term goal is to grow as a Full-stack Developer and establish a sustainable career in the tech industry.</p>
+      <p class="text-center fs-5">
+        I'm <strong>Tran Bao Duy</strong> (born in 2004), a final-year student majoring in 
+        <strong>Software Engineering</strong> at 
+        <strong>Ho Chi Minh City University of Technology (HUTECH)</strong>. 
+        I specialize in <strong>Full-Stack Development</strong>, with expertise in 
+        <strong>.NET</strong> for web applications and <strong>Flutter</strong> for mobile development. <br><br>
+        I've been passionate about technology from an early age and have developed a solid skill set 
+        in both backend and frontend development. I enjoy creating innovative, user-centric solutions 
+        and continuously exploring new technologies to enhance my capabilities. <br><br>
+        I'm eager to apply my knowledge to real-world projects, collaborate with professional teams, 
+        and contribute to building valuable, scalable products. My long-term goal is to grow as a 
+        <strong>Full-Stack Developer</strong> and build a sustainable career in the tech industry.
+      </p>
     </div>
   </div>
 </section>
+
+
 
 <!-- Skills Section -->
 <section id="skills">
@@ -337,9 +380,24 @@
         <p><strong>Result:</strong> Enhanced user convenience and ensured seamless data synchronization with the web system.</p>
       </div>
     </div>
-    
-    <!-- 5. 3D Tourism Website -->
-    <div class="col-lg-6 offset-lg-3" data-aos="fade-up" data-aos-delay="400">
+
+    <!-- 5. Real-time Customer Feedback System -->
+    <div class="col-lg-6" data-aos="fade-up" data-aos-delay="300">
+      <div class="card p-4 h-100">
+        <h5>
+          Real-time Customer Feedback System 
+          <a href="https://github.com/TranBaoDuy-hutech/travelapp" target="_blank" class="project-link" title="View on GitHub">🔗</a>
+        </h5>
+        <p><strong>Duration:</strong> 08/2024 – 10/2024</p>
+        <p><strong>Frontend:</strong> Flutter, Dart</p>
+        <p><strong>Backend:</strong> Python (FastAPI), WebSocket, SQL Server</p>
+        <p><strong>Description:</strong> Built a real-time feedback system that allows customers to send comments, ratings, and messages instantly during their travel experience. Integrated WebSocket for live two-way communication between users and customer support.</p>
+        <p><strong>Result:</strong> Improved user engagement and response time by 60%, ensuring smooth and instant feedback synchronization across all connected clients.</p>
+      </div>
+    </div>
+
+    <!-- 6. 3D Tourism Website -->
+    <div class="col-lg-6 " data-aos="fade-up" data-aos-delay="400">
       <div class="card p-4 h-100">
         <h5>3D Tourism Website – Promoting An Giang Tourism</h5>
         <p><strong>Duration:</strong> 09/2024</p>
@@ -583,27 +641,84 @@
   const typingElements = document.querySelectorAll('#hero .typing-text');
 
   typingElements.forEach((element, index) => {
-    // Xóa nội dung ban đầu để tránh hiển thị trước khi gõ
-    element.innerHTML = '';
+    element.innerHTML = ''; // xóa nội dung ban đầu
     const text = element.getAttribute('data-text');
     let charIndex = 0;
 
     function type() {
       if (charIndex < text.length) {
-        // Thêm ký tự vào thẻ span với delay animation cho slide up
         element.innerHTML += `<span style="animation-delay: ${charIndex * 0.05}s">${text.charAt(charIndex)}</span>`;
         charIndex++;
-        setTimeout(type, 50); // Tốc độ gõ: 50ms/ký tự
+        setTimeout(type, 50);
       } else {
-        // Tắt con trỏ nhấp nháy khi gõ xong
-        element.style.borderRight = 'none';
+        element.style.borderRight = 'none'; // ẩn con trỏ khi xong
       }
     }
-    // Bắt đầu gõ với độ trễ để các phần tử xuất hiện tuần tự
-    setTimeout(type, index * 1500); // <h1>: 0s, <p.lead>: 1.5s, <p.muted>: 3s
+
+    // gõ tuần tự từng dòng
+    setTimeout(type, index * 1500);
   });
 });
+
+</script>
+<h2 class="role typing"></h2>
+
+<script>
+  const text = "Software Engineering Student at HUTECH";
+  const typingElement = document.querySelector(".role.typing");
+  let index = 0;
+
+  function type() {
+    if (index < text.length) {
+      typingElement.textContent += text.charAt(index);
+      index++;
+      setTimeout(type, 100); // Tốc độ gõ (100ms mỗi ký tự)
+    } else {
+      // Tùy chọn: lặp lại hiệu ứng
+      setTimeout(() => {
+        typingElement.textContent = "";
+        index = 0;
+        type();
+      }, 2000); // Chờ 2s trước khi lặp lại
+    }
+  }
+
+  // Bắt đầu ngay khi trang load
+  window.addEventListener("load", type);
 </script>
 
+<style>
+  .role.typing {
+    font-size: 1.6rem;
+    color: var(--accent-color);
+    font-weight: 700;
+    margin-bottom: 25px;
+    display: inline-block;
+    border-right: 3px solid var(--accent-color);
+    animation: blink-caret 0.75s step-end infinite;
+  }
+
+  @keyframes blink-caret {
+    from, to {
+      border-color: transparent;
+    }
+    50% {
+      border-color: var(--accent-color);
+    }
+  }
+
+  /* Responsive */
+  @media (max-width: 768px) {
+    .role.typing {
+      font-size: 1.2rem;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .role.typing {
+      font-size: 1rem;
+    }
+  }
+</style>
 </body>
 </html>
