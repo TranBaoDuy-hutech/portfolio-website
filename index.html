@@ -14,13 +14,16 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+
 <!-- Navbar -->
 <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
   <div class="container">
     <a class="navbar-brand" href="#hero">BAO DUY</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
+
     <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
       <ul class="navbar-nav">
         <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
@@ -29,15 +32,16 @@
         <li class="nav-item"><a class="nav-link" href="#certificates">Certificates</a></li>
         <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
       </ul>
-      <button id="like-btn" class="btn btn-warning btn-sm d-flex align-items-center" style="min-width: 60px; justify-content: center;">
-        ❤️ <span id="like-count" style="margin-left: 5px; min-width: 30px; text-align: center;">1000</span>
-      </button>
+
+      <!-- ❤️ Nút Like đặt ở cuối navbar -->
+      <div class="ms-3 d-flex align-items-center">
+        <button id="like-btn" class="btn btn-outline-light btn-sm" style="font-size:18px;">❤️</button>
+        <span id="like-count" class="ms-2" style="font-size:18px;">0</span>
+      </div>
     </div>
   </div>
 </nav>
 
-
-<!-- Hero Section -->
 <!-- Hero Section -->
 <section id="hero" class="text-center py-5">
   <img src="images/avt1.jpg" alt="Avatar" class="hero-avatar mb-3">
@@ -46,7 +50,6 @@
   <p class="text-muted mb-4 typing-text" data-text="Web & Mobile Developer | Seeking internships in Fullstack development with experience in .NET web development and Flutter mobile development. Eager to apply knowledge to real projects and contribute to valuable products."></p>
   <a href="#contact" class="btn btn-warning btn-lg">Get In Touch</a>
 </section>
-
 
 <!-- About Section -->
 <section id="about" class="container" data-aos="fade-up">
@@ -447,7 +450,53 @@
 <!-- Scripts -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+<!-- 🔥 Firebase SDK đặt cuối trang -->
+<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-database.js"></script>
+<script src="script.js"></script>
+<script type="module">
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js";
+  import { getDatabase, ref, onValue, runTransaction } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-database.js";
+
+  const firebaseConfig = {
+    apiKey: "AIzaSyDcQZvTeujgBWVSnk9TxmsLuUdxG5f54RQ",
+    authDomain: "about-2ab23.firebaseapp.com",
+    databaseURL: "https://about-2ab23-default-rtdb.asia-southeast1.firebasedatabase.app",
+    projectId: "about-2ab23",
+    storageBucket: "about-2ab23.firebasestorage.app",
+    messagingSenderId: "532249000053",
+    appId: "1:532249000053:web:1913d76a2678c69adaa03c",
+    measurementId: "G-X73BVJ550Z"
+  };
+
+  const app = initializeApp(firebaseConfig);
+  const db = getDatabase(app);
+
+  const likeRef = ref(db, "likes/count");
+  const likeBtn = document.getElementById("like-btn");
+  const likeCount = document.getElementById("like-count");
+
+  // Realtime update + set mặc định
+  onValue(likeRef, (snapshot) => {
+    const count = snapshot.val();
+    if (count === null) {
+      runTransaction(likeRef, () => 1110);
+    } else {
+      likeCount.textContent = count;
+    }
+  });
+
+  // Khi nhấn ❤️
+  likeBtn.addEventListener("click", () => {
+    runTransaction(likeRef, (currentCount) => {
+      return (currentCount || 1110) + 1;
+    });
+  });
+</script>
+
+
 <script>
+
   document.addEventListener("DOMContentLoaded", function () {
 
     // =======================
@@ -528,23 +577,6 @@
       document.body.style.opacity = '1';
     }, 100);
 
-    // =======================
-    // Like Button Functionality
-    // =======================
-    const likeBtn = document.getElementById("like-btn");
-    const likeCount = document.getElementById("like-count");
-
-    if (likeBtn && likeCount) { // kiểm tra tồn tại
-      let count = parseInt(localStorage.getItem("likeCount")) || 1000;
-      likeCount.textContent = count;
-
-      likeBtn.addEventListener("click", () => {
-        count++;
-        likeCount.textContent = count;
-        localStorage.setItem("likeCount", count);
-      });
-    }
-
   });
 
  document.addEventListener('DOMContentLoaded', () => {
@@ -567,7 +599,6 @@
         element.style.borderRight = 'none';
       }
     }
-
     // Bắt đầu gõ với độ trễ để các phần tử xuất hiện tuần tự
     setTimeout(type, index * 1500); // <h1>: 0s, <p.lead>: 1.5s, <p.muted>: 3s
   });
