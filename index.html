@@ -690,7 +690,7 @@
     }
 
     /* Projects */
-    .project-link {
+  .project-link {
       color: var(--accent-color);
       text-decoration: none;
       font-size: 1.3rem;
@@ -698,6 +698,9 @@
       display: inline-block;
       filter: drop-shadow(0 0 8px rgba(0, 212, 255, 0.5));
       position: relative;
+      z-index: 10;
+      cursor: pointer;
+      pointer-events: auto;
     }
 
     .project-link::before {
