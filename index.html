@@ -971,7 +971,7 @@
 
     <div class="hero-avatar">
       <div class="avatar-circle">
-        <img src="images/BDUY.png" alt="Tran Bao Duy Avatar" class="avatar-img">
+        <img id="avatar" src="images/BDUY.png" alt="Tran Bao Duy Avatar" class="avatar-img">
         <ul class="skills">
           <li class="skill">C#</li>
           <li class="skill">Java</li>
@@ -1529,6 +1529,23 @@
     }, 100);
 
   });
+  // Avatar image rotation
+  const avatars = [
+    "images/BDUY.png",
+    "images/BDUY2.jpg",
+    "images/BDUY3.jpg",
+    "images/avt1.jpg",
+    "images/avt2.jpg",
+  ];
+
+  let index = 0;
+  const avatarImg = document.getElementById("avatar");
+
+  setInterval(() => {
+    index = (index + 1) % avatars.length;
+    avatarImg.src = avatars[index];
+  }, 3000); // đổi mỗi 3 giây
+
 </script>
 </body>
 </html>
