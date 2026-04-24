@@ -1,9 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="TRAN BAO DUY - Software Engineering Student at HUTECH | Web & Mobile Developer Portfolio">
+  <meta name="description"
+    content="TRAN BAO DUY - Software Engineering Student at HUTECH | Web & Mobile Developer Portfolio">
   <meta name="author" content="TRAN BAO DUY">
   <title>TRAN BAO DUY</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -44,7 +46,7 @@
       left: 0;
       width: 100%;
       height: 100%;
-      background: 
+      background:
         radial-gradient(circle at 20% 20%, rgba(0, 212, 255, 0.08) 0%, transparent 50%),
         radial-gradient(circle at 80% 80%, rgba(138, 43, 226, 0.08) 0%, transparent 50%),
         linear-gradient(135deg, var(--primary-bg) 0%, var(--secondary-bg) 100%);
@@ -59,7 +61,7 @@
       left: 0;
       width: 100%;
       height: 100%;
-      background-image: 
+      background-image:
         radial-gradient(2px 2px at 20% 30%, rgba(0, 212, 255, 0.3), transparent),
         radial-gradient(2px 2px at 60% 70%, rgba(138, 43, 226, 0.3), transparent),
         radial-gradient(1px 1px at 50% 50%, rgba(255, 255, 255, 0.2), transparent),
@@ -73,15 +75,20 @@
     }
 
     @keyframes particles {
-      0%, 100% {
+
+      0%,
+      100% {
         background-position: 0% 0%, 100% 100%, 50% 50%, 20% 80%, 80% 20%;
       }
+
       25% {
         background-position: 100% 0%, 0% 100%, 30% 70%, 80% 20%, 20% 80%;
       }
+
       50% {
         background-position: 100% 100%, 0% 0%, 70% 30%, 60% 40%, 40% 60%;
       }
+
       75% {
         background-position: 0% 100%, 100% 0%, 40% 60%, 30% 70%, 70% 30%;
       }
@@ -145,8 +152,17 @@
     }
 
     @keyframes pulse {
-      0%, 100% { transform: scale(1); opacity: 0.5; }
-      50% { transform: scale(1.1); opacity: 0.8; }
+
+      0%,
+      100% {
+        transform: scale(1);
+        opacity: 0.5;
+      }
+
+      50% {
+        transform: scale(1.1);
+        opacity: 0.8;
+      }
     }
 
     .nav-link {
@@ -216,8 +232,15 @@
     }
 
     @keyframes float {
-      0%, 100% { transform: translateY(0) rotate(0deg); }
-      50% { transform: translateY(-30px) rotate(5deg); }
+
+      0%,
+      100% {
+        transform: translateY(0) rotate(0deg);
+      }
+
+      50% {
+        transform: translateY(-30px) rotate(5deg);
+      }
     }
 
     .hero-container {
@@ -249,6 +272,7 @@
         opacity: 0;
         transform: translateY(30px);
       }
+
       to {
         opacity: 1;
         transform: translateY(0);
@@ -275,8 +299,15 @@
     }
 
     @keyframes blink-caret {
-      from, to { border-color: transparent; }
-      50% { border-color: var(--accent-color); }
+
+      from,
+      to {
+        border-color: transparent;
+      }
+
+      50% {
+        border-color: var(--accent-color);
+      }
     }
 
     .description {
@@ -353,109 +384,159 @@
     }
 
     /* Hero Avatar */
-.hero-avatar {
-  position: relative;
-  display: flex;
-  justify-content: center;
-  padding: 50px 0;
-}
+    .hero-avatar {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      padding: 50px 0;
+    }
 
-.avatar-circle {
-  position: relative;
-  width: 400px;
-  height: 400px;
-  border-radius: 50%;
-  background: linear-gradient(135deg, rgba(0, 212, 255, 0.3), rgba(138, 43, 226, 0.3));
-  padding: 8px;
-  box-shadow: 0 0 60px rgba(0, 212, 255, 0.3), 0 0 100px rgba(138, 43, 226, 0.2);
-  animation: rotateAll 35s linear infinite; /* Quay chậm để dễ nhìn */
-  will-change: transform;
-}
+    .avatar-circle {
+      position: relative;
+      width: 400px;
+      height: 400px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, rgba(0, 212, 255, 0.3), rgba(138, 43, 226, 0.3));
+      padding: 8px;
+      box-shadow: 0 0 60px rgba(0, 212, 255, 0.3), 0 0 100px rgba(138, 43, 226, 0.2);
+      animation: rotateAll 35s linear infinite;
+      /* Quay chậm để dễ nhìn */
+      will-change: transform;
+    }
 
-@keyframes rotateAll {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
-}
+    @keyframes rotateAll {
+      from {
+        transform: rotate(0deg);
+      }
 
-.avatar-img {
-  width: 100%;
-  height: 100%;
-  border-radius: 50%;
-  object-fit: cover;
-  border: 5px solid var(--primary-bg);
-  display: block;
-  z-index: 1; /* Đảm bảo nằm dưới skills */
-}
+      to {
+        transform: rotate(360deg);
+      }
+    }
 
-/* Bỏ quay avatar-circle nếu muốn yên tĩnh hơn (tùy bạn) */
-/* Nếu muốn giữ quay avatar, giữ nguyên animation rotateAll, nhưng skill sẽ quay riêng */
+    .avatar-img {
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 5px solid var(--primary-bg);
+      display: block;
+      z-index: 1;
+      /* Đảm bảo nằm dưới skills */
+    }
 
-/* Skills container - quay độc lập */
-/* Không quay container nữa để tránh lỗi gom lại */
-.skills {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  pointer-events: none;
-  z-index: 20;
-  transform-style: preserve-3d;
-  backface-visibility: hidden;
-  will-change: transform;
-}
+    /* Bỏ quay avatar-circle nếu muốn yên tĩnh hơn (tùy bạn) */
+    /* Nếu muốn giữ quay avatar, giữ nguyên animation rotateAll, nhưng skill sẽ quay riêng */
 
-/* Mỗi skill tự quay orbit độc lập */
-.skill {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  padding: 12px 24px;
-  background: linear-gradient(135deg, #00d4ff, #00b4d8);
-  color: white;
-  border-radius: 30px;
-  font-size: 1rem;
-  font-weight: 700;
-  box-shadow: 0 6px 30px rgba(0, 212, 255, 0.7), 0 0 0 2px rgba(255,255,255,0.3);
-  backdrop-filter: blur(10px);
-  white-space: nowrap;
-  pointer-events: auto;
-  /* Animation chung cho tất cả */
-  animation: orbit 20s linear infinite, popIn 1s ease-out forwards;
-}
+    /* Skills container - quay độc lập */
+    /* Không quay container nữa để tránh lỗi gom lại */
+    .skills {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      pointer-events: none;
+      z-index: 20;
+      transform-style: preserve-3d;
+      backface-visibility: hidden;
+      will-change: transform;
+    }
 
-/* Mỗi skill có delay khác nhau để phân tán vị trí ban đầu */
-.skill:nth-child(1) { animation-delay: 0s, 0.2s; }      /* 0° */
-.skill:nth-child(2) { animation-delay: -2.5s, 0.4s; }   /* 45° */
-.skill:nth-child(3) { animation-delay: -5s, 0.6s; }     /* 90° */
-.skill:nth-child(4) { animation-delay: -7.5s, 0.8s; }   /* 135° */
-.skill:nth-child(5) { animation-delay: -10s, 1.0s; }    /* 180° */
-.skill:nth-child(6) { animation-delay: -12.5s, 1.2s; }  /* 225° */
-.skill:nth-child(7) { animation-delay: -15s, 1.4s; }    /* 270° */
-.skill:nth-child(8) { animation-delay: -17.5s, 1.6s; }  /* 315° */
+    /* Mỗi skill tự quay orbit độc lập */
+    .skill {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      padding: 12px 24px;
+      background: linear-gradient(135deg, #00d4ff, #00b4d8);
+      color: white;
+      border-radius: 30px;
+      font-size: 1rem;
+      font-weight: 700;
+      box-shadow: 0 6px 30px rgba(0, 212, 255, 0.7), 0 0 0 2px rgba(255, 255, 255, 0.3);
+      backdrop-filter: blur(10px);
+      white-space: nowrap;
+      pointer-events: auto;
+      /* Animation chung cho tất cả */
+      animation: orbit 20s linear infinite, popIn 1s ease-out forwards;
+    }
 
-/* Keyframes orbit - quay tròn đều */
-@keyframes orbit {
-  from { transform: translate(-50%, -50%) rotate(0deg) translateY(-180px) rotate(0deg); }
-  to   { transform: translate(-50%, -50%) rotate(360deg) translateY(-180px) rotate(-360deg); }
-}
+    /* Mỗi skill có delay khác nhau để phân tán vị trí ban đầu */
+    .skill:nth-child(1) {
+      animation-delay: 0s, 0.2s;
+    }
 
-/* Hiện lần lượt - chỉ opacity */
-@keyframes popIn {
-  0%   { opacity: 0; }
-  100% { opacity: 1; }
-}
+    /* 0° */
+    .skill:nth-child(2) {
+      animation-delay: -2.5s, 0.4s;
+    }
 
-/* Hover đẹp */
-.skill:hover {
-  animation-play-state: paused; /* Dừng quay khi hover để dễ đọc */
-  transform: translate(-50%, -50%) scale(1.5) !important;
-  box-shadow: 0 12px 50px rgba(0, 212, 255, 0.9), 0 0 0 5px white;
-  z-index: 100;
-}
+    /* 45° */
+    .skill:nth-child(3) {
+      animation-delay: -5s, 0.6s;
+    }
+
+    /* 90° */
+    .skill:nth-child(4) {
+      animation-delay: -7.5s, 0.8s;
+    }
+
+    /* 135° */
+    .skill:nth-child(5) {
+      animation-delay: -10s, 1.0s;
+    }
+
+    /* 180° */
+    .skill:nth-child(6) {
+      animation-delay: -12.5s, 1.2s;
+    }
+
+    /* 225° */
+    .skill:nth-child(7) {
+      animation-delay: -15s, 1.4s;
+    }
+
+    /* 270° */
+    .skill:nth-child(8) {
+      animation-delay: -17.5s, 1.6s;
+    }
+
+    /* 315° */
+
+    /* Keyframes orbit - quay tròn đều */
+    @keyframes orbit {
+      from {
+        transform: translate(-50%, -50%) rotate(0deg) translateY(-180px) rotate(0deg);
+      }
+
+      to {
+        transform: translate(-50%, -50%) rotate(360deg) translateY(-180px) rotate(-360deg);
+      }
+    }
+
+    /* Hiện lần lượt - chỉ opacity */
+    @keyframes popIn {
+      0% {
+        opacity: 0;
+      }
+
+      100% {
+        opacity: 1;
+      }
+    }
+
+    /* Hover đẹp */
+    .skill:hover {
+      animation-play-state: paused;
+      /* Dừng quay khi hover để dễ đọc */
+      transform: translate(-50%, -50%) scale(1.5) !important;
+      box-shadow: 0 12px 50px rgba(0, 212, 255, 0.9), 0 0 0 5px white;
+      z-index: 100;
+    }
 
     /* Sections */
     section {
@@ -477,6 +558,7 @@
         opacity: 0;
         transform: translateY(-30px);
       }
+
       to {
         opacity: 1;
         transform: translateY(0);
@@ -499,6 +581,7 @@
       from {
         width: 0;
       }
+
       to {
         width: 80px;
       }
@@ -580,7 +663,7 @@
 
     .card:hover {
       transform: translateY(-10px);
-      box-shadow: 
+      box-shadow:
         0 20px 40px rgba(0, 212, 255, 0.3),
         0 0 0 1px var(--accent-color);
       border-color: var(--accent-color);
@@ -633,11 +716,14 @@
     }
 
     @keyframes sparkle {
-      0%, 100% { 
+
+      0%,
+      100% {
         transform: translate(-50%, -50%) scale(1) rotate(0deg);
         opacity: 0.1;
       }
-      50% { 
+
+      50% {
         transform: translate(-50%, -50%) scale(1.2) rotate(180deg);
         opacity: 0.2;
       }
@@ -647,7 +733,7 @@
       background: rgba(0, 212, 255, 0.08);
       border-color: var(--accent-color);
       transform: translateY(-8px) scale(1.02);
-      box-shadow: 
+      box-shadow:
         0 10px 30px rgba(0, 212, 255, 0.2),
         0 0 0 1px rgba(0, 212, 255, 0.3);
     }
@@ -690,7 +776,7 @@
     }
 
     /* Projects */
-  .project-link {
+    .project-link {
       color: var(--accent-color);
       text-decoration: none;
       font-size: 1.3rem;
@@ -720,8 +806,15 @@
     }
 
     @keyframes electric {
-      0%, 100% { transform: scale(1) rotate(20deg); }
-      50% { transform: scale(1.2) rotate(-20deg); }
+
+      0%,
+      100% {
+        transform: scale(1) rotate(20deg);
+      }
+
+      50% {
+        transform: scale(1.2) rotate(-20deg);
+      }
     }
 
     .project-link:hover {
@@ -731,7 +824,7 @@
 
     /* Contact */
     #contact {
-      background: 
+      background:
         linear-gradient(135deg, rgba(0, 212, 255, 0.08), rgba(138, 43, 226, 0.08)),
         radial-gradient(circle at 50% 50%, rgba(0, 212, 255, 0.05) 0%, transparent 50%);
       position: relative;
@@ -801,8 +894,13 @@
     }
 
     @keyframes scan {
-      0% { left: -100%; }
-      100% { left: 100%; }
+      0% {
+        left: -100%;
+      }
+
+      100% {
+        left: 100%;
+      }
     }
 
     /* Scroll to top button */
@@ -832,9 +930,17 @@
     }
 
     @keyframes bounceIn {
-      0% { transform: scale(0); }
-      50% { transform: scale(1.1); }
-      100% { transform: scale(1); }
+      0% {
+        transform: scale(0);
+      }
+
+      50% {
+        transform: scale(1.1);
+      }
+
+      100% {
+        transform: scale(1);
+      }
     }
 
     .scroll-top:hover {
@@ -932,759 +1038,799 @@
     }
   </style>
 </head>
+
 <body>
 
-<!-- Navbar -->
-<nav class="navbar navbar-expand-lg navbar-dark fixed-top">
-  <div class="container">
-    <a class="navbar-brand" href="#hero">BAO DUY</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-      <ul class="navbar-nav">
-        <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
-        <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
-        <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
-        <li class="nav-item"><a class="nav-link" href="#certificates">Certificates</a></li>
-        <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
-      </ul>
-    </div>
-  </div>
-</nav>
-
-<!-- Hero Section -->
-<section id="hero">
-  <div class="hero-container">
-    <div class="hero-content">
-      <p class="intro">Hello, I'm</p>
-      <h1>Tran Bao Duy</h1>
-      <h2 class="role typing"></h2>
-        <p class="description">
-        Final-year Software Engineering student (HUTECH, 2022–2026) with strong hands-on experience building full-stack web and mobile applications. Proficient in Java Spring Boot, ASP.NET Core, PHP MVC, Flutter, and Python (Flask/FastAPI) for RESTful API development. Delivered multiple end-to-end projects incorporating machine learning features, real-time functionality, and 3D rendering. Seeking a Full-Stack Developer position to build scalable, user-centric software products and contribute to impactful real-world solutions.
-        </p>
-      <div class="hero-buttons">
-        <a href="#contact" class="btn-contact">Contact Me</a>
-        <a href="TRANBAODUY_DEV_CV.pdf" class="btn-download">Download Resume</a>
-      </div>
-    </div>
-
-    <div class="hero-avatar">
-      <div class="avatar-circle">
-        <img id="avatar" src="images/BDUY.png" alt="Tran Bao Duy Avatar" class="avatar-img">
-        <ul class="skills">
-          <li class="skill">C#</li>
-          <li class="skill">Java</li>
-          <li class="skill">Python</li>
-          <li class="skill">Dart</li>
-          <li class="skill">.NET</li>
-          <li class="skill">Flutter</li>
-          <li class="skill">SQL</li>
-          <li class="skill">APIs</li>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="#hero">BAO DUY</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+          <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+          <li class="nav-item"><a class="nav-link" href="#certificates">Certificates</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
         </ul>
       </div>
     </div>
-  </div>
-</section>
+  </nav>
 
-<!-- About Section -->
-<section id="about" class="container" data-aos="fade-up">
-  <h2 class="fw-bold text-center">About Me</h2>
-  <div class="row justify-content-center">
-    <div class="col-lg-9">
-      <p class="text-center fs-5">
-        I'm <strong>Tran Bao Duy</strong>, a final-year <strong>Software Engineering</strong> student at 
-        <strong>Ho Chi Minh City University of Technology (HUTECH)</strong>. I focus on 
-        <strong>Full-Stack Development</strong> with experience building web and mobile applications 
-        using technologies such as <strong>Java Spring Boot, ASP.NET Core, PHP MVC, Flutter, and Python</strong>.
-        <br><br>
+  <!-- Hero Section -->
+  <section id="hero">
+    <div class="hero-container">
+      <div class="hero-content">
+        <p class="intro">Hello, I'm</p>
+        <h1>Tran Bao Duy</h1>
+        <h2 class="role typing"></h2>
+        <p class="text-center fs-5">
+          Recent Software Engineering graduate from <strong>HUTECH</strong>
+          specializing in <strong>Full-Stack Development</strong>.
+          Passionate about building scalable, user-centric web and mobile applications
+          using modern technologies.
+        </p>
+        <div class="hero-buttons">
+          <a href="#contact" class="btn-contact">Contact Me</a>
+          <a href="TRANBAODUY_DEV_CV.pdf" class="btn-download">Download Resume</a>
+        </div>
+      </div>
 
-        During my studies, I have developed several real-world projects including 
-        <strong>tour booking platforms, real estate trading systems, mobile travel applications, 
-        and 3D tourism websites</strong>. These projects integrate technologies such as 
-        <strong>RESTful APIs, machine learning features, real-time communication, and 3D visualization</strong>.
-        <br><br>
-
-        I am passionate about building scalable, user-friendly software products and continuously 
-        improving my skills by exploring modern technologies. My goal is to work as a 
-        <strong>Full-Stack Developer</strong>, contribute to impactful projects, and grow 
-        within a professional development environment.
-      </p>
-    </div>
-  </div>
-</section>
-
-<!-- Skills Section -->
-<section id="skills">
-  <div class="container" data-aos="fade-up">
-    <h2 class="fw-bold text-center">Technical Skills</h2>
-
-    <!-- Programming Languages -->
-    <div class="row mb-5">
-      <div class="col-12">
-        <h4 class="text-danger">💻 Programming Languages</h4>
-        <div class="row g-4">
-          <div class="col-lg-3 col-md-4 col-sm-6">
-            <div class="skill-card">
-              <h6>Java</h6>
-              <p class="mb-0">Spring Boot development</p>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-4 col-sm-6">
-            <div class="skill-card">
-              <h6>C#</h6>
-              <p class="mb-0">.NET development</p>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-4 col-sm-6">
-            <div class="skill-card">
-              <h6>PHP</h6>
-              <p class="mb-0">MVC web development</p>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-4 col-sm-6">
-            <div class="skill-card">
-              <h6>Python</h6>
-              <p class="mb-0">Flask / FastAPI APIs</p>
-            </div>
-          </div>
+      <div class="hero-avatar">
+        <div class="avatar-circle">
+          <img id="avatar" src="images/BDUY.png" alt="Tran Bao Duy Avatar" class="avatar-img">
+          <ul class="skills">
+            <li class="skill">C#</li>
+            <li class="skill">Java</li>
+            <li class="skill">Python</li>
+            <li class="skill">Dart</li>
+            <li class="skill">.NET</li>
+            <li class="skill">Flutter</li>
+            <li class="skill">SQL</li>
+            <li class="skill">APIs</li>
+          </ul>
         </div>
       </div>
     </div>
+  </section>
 
-    <!-- Backend Development -->
-    <div class="row mb-5">
-      <div class="col-12">
-        <h4 class="text-primary">⚙️ Backend Development</h4>
-        <div class="row g-4">
-
-          <div class="col-lg-3 col-md-4 col-sm-6">
-            <div class="skill-card">
-              <h6>Spring Boot</h6>
-              <p class="mb-0">Java web framework</p>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-4 col-sm-6">
-            <div class="skill-card">
-              <h6>ASP.NET Core</h6>
-              <p class="mb-0">Web API & MVC</p>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-4 col-sm-6">
-            <div class="skill-card">
-              <h6>Node.js</h6>
-              <p class="mb-0">Express.js backend</p>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-4 col-sm-6">
-            <div class="skill-card">
-              <h6>RESTful API</h6>
-              <p class="mb-0">API architecture</p>
-            </div>
-          </div>
-
-        </div>
-      </div>
-    </div>
-
-    <!-- Frontend Development -->
-    <div class="row mb-5">
-      <div class="col-12">
-        <h4 class="text-success">🌐 Frontend Development</h4>
-        <div class="row g-4">
-
-          <div class="col-lg-3 col-md-4 col-sm-6">
-            <div class="skill-card">
-              <h6>HTML</h6>
-              <p class="mb-0">Web structure</p>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-4 col-sm-6">
-            <div class="skill-card">
-              <h6>CSS</h6>
-              <p class="mb-0">Responsive design</p>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-4 col-sm-6">
-            <div class="skill-card">
-              <h6>JavaScript</h6>
-              <p class="mb-0">Frontend logic</p>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-4 col-sm-6">
-            <div class="skill-card">
-              <h6>Three.js</h6>
-              <p class="mb-0">3D web rendering</p>
-            </div>
-          </div>
-
-        </div>
-      </div>
-    </div>
-
-    <!-- Mobile Development -->
-    <div class="row mb-5">
-      <div class="col-12">
-        <h4 class="text-warning">📱 Mobile Development</h4>
-        <div class="row g-4">
-
-          <div class="col-lg-3 col-md-4 col-sm-6">
-            <div class="skill-card">
-              <h6>Flutter</h6>
-              <p class="mb-0">Cross-platform mobile</p>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-4 col-sm-6">
-            <div class="skill-card">
-              <h6>Dart</h6>
-              <p class="mb-0">Flutter programming</p>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-4 col-sm-6">
-            <div class="skill-card">
-              <h6>Provider / Bloc</h6>
-              <p class="mb-0">State management</p>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-4 col-sm-6">
-            <div class="skill-card">
-              <h6>REST API</h6>
-              <p class="mb-0">Mobile API integration</p>
-            </div>
-          </div>
-
-        </div>
-      </div>
-    </div>
-
-    <!-- Database -->
-    <div class="row mb-5">
-      <div class="col-12">
-        <h4 class="text-info">🗄️ Database</h4>
-        <div class="row g-4">
-
-          <div class="col-lg-4 col-md-6">
-            <div class="skill-card">
-              <h6>SQL Server</h6>
-              <p class="mb-0">Microsoft database</p>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6">
-            <div class="skill-card">
-              <h6>MySQL</h6>
-              <p class="mb-0">Relational database</p>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6">
-            <div class="skill-card">
-              <h6>PostgreSQL</h6>
-              <p class="mb-0">Advanced database</p>
-            </div>
-          </div>
-
-        </div>
-      </div>
-    </div>
-
-    <!-- Development Tools -->
-    <div class="row mb-5">
-      <div class="col-12">
-        <h4 class="text-secondary">🛠️ Development Tools</h4>
-        <div class="row g-4">
-
-          <div class="col-lg-3 col-md-4 col-sm-6">
-            <div class="skill-card">
-              <h6>VS Code</h6>
-              <p class="mb-0">Code editor</p>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-4 col-sm-6">
-            <div class="skill-card">
-              <h6>IntelliJ IDEA</h6>
-              <p class="mb-0">Java & Spring Boot IDE</p>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-4 col-sm-6">
-            <div class="skill-card">
-              <h6>Visual Studio</h6>
-              <p class="mb-0">.NET IDE</p>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-4 col-sm-6">
-            <div class="skill-card">
-              <h6>Android Studio</h6>
-              <p class="mb-0">Mobile development</p>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-4 col-sm-6">
-            <div class="skill-card">
-              <h6>Git / GitHub</h6>
-              <p class="mb-0">Version control</p>
-            </div>
-          </div>
-
-        </div>
-      </div>
-    </div>
-
-    <!-- Design & Testing -->
-    <div class="row mb-5">
-      <div class="col-12">
-        <h4 class="text-dark">🎨 Design & Testing</h4>
-        <div class="row g-4">
-
-          <div class="col-lg-3 col-md-4 col-sm-6">
-            <div class="skill-card">
-              <h6>Figma</h6>
-              <p class="mb-0">UI/UX design</p>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-4 col-sm-6">
-            <div class="skill-card">
-              <h6>Canva</h6>
-              <p class="mb-0">Design tool</p>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-4 col-sm-6">
-            <div class="skill-card">
-              <h6>Postman</h6>
-              <p class="mb-0">API testing</p>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-4 col-sm-6">
-            <div class="skill-card">
-              <h6>Swagger</h6>
-              <p class="mb-0">API documentation</p>
-            </div>
-          </div>
-
-        </div>
-      </div>
-    </div>
-    
-    <!-- Soft Skills -->
-    <div class="row">
-      <div class="col-12">
-        <h4 class="text-secondary">💼 Professional Skills</h4>
-        <div class="row g-4">
-          <div class="col-lg-2 col-md-4 col-sm-6">
-            <div class="skill-card" data-aos="zoom-in" data-aos-delay="50">
-              <h6>Teamwork</h6>
-              <p class="mb-0">Collaboration</p>
-            </div>
-          </div>
-          <div class="col-lg-2 col-md-4 col-sm-6">
-            <div class="skill-card" data-aos="zoom-in" data-aos-delay="100">
-              <h6>Communication</h6>
-              <p class="mb-0">Interpersonal</p>
-            </div>
-          </div>
-          <div class="col-lg-2 col-md-4 col-sm-6">
-            <div class="skill-card" data-aos="zoom-in" data-aos-delay="150">
-              <h6>Management</h6>
-              <p class="mb-0">Organization</p>
-            </div>
-          </div>
-          <div class="col-lg-2 col-md-4 col-sm-6">
-            <div class="skill-card" data-aos="zoom-in" data-aos-delay="200">
-              <h6>Self-learning</h6>
-              <p class="mb-0">Adaptability</p>
-            </div>
-          </div>
-          <div class="col-lg-2 col-md-4 col-sm-6">
-            <div class="skill-card" data-aos="zoom-in" data-aos-delay="250">
-              <h6>Problem Solving</h6>
-              <p class="mb-0">Analysis</p>
-            </div>
-          </div>
-          <div class="col-lg-2 col-md-4 col-sm-6">
-            <div class="skill-card" data-aos="zoom-in" data-aos-delay="300">
-              <h6>MS Office</h6>
-              <p class="mb-0">Productivity</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-  </div>
-</section>
-
-<!-- Projects Section -->
-<section id="projects" class="container">
-  <h2 class="fw-bold text-center" data-aos="fade-up">Featured Projects</h2>
-  <div class="row g-4">
-    
-    <div class="col-lg-6" data-aos="fade-up">
-      <div class="card p-4 h-100">
-        <h5>
-          Bookstore Management Software 
-          <a href="https://github.com/TranBaoDuy-hutech/DOAN_WINDOWS" target="_blank" class="project-link" title="View on GitHub">🔗</a>
-        </h5>
-        <p><strong>Duration:</strong> 07/2024 – 09/2024</p>
-        <p><strong>Backend:</strong> C# (WinForms), SQL Server</p>
-        <p><strong>Frontend:</strong> Windows Forms, DataGridView, TextBox, Button</p>
-        <p><strong>Description:</strong> Developed a comprehensive bookstore management system supporting CRUD operations for products, customer management, invoices, inventory, and sales reporting.</p>
-        <p><strong>Result:</strong> Automated inventory management, improved sales efficiency, reduced errors, and saved management time.</p>
-      </div>
-    </div>
-    
-    <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
-      <div class="card p-4 h-100">
-        <h5>
-          Website Tour Booking System 
-          <a href="https://github.com/TranBaoDuy-hutech/DOAN_LTWeb" target="_blank" class="project-link" title="View on GitHub">🔗</a>
-        </h5>
-        <p><strong>Duration:</strong> 09/2024 – 11/2024</p>
-        <p><strong>Backend:</strong> ASP.NET Core + SQL Server, RESTful API, Machine Learning</p>
-        <p><strong>Frontend:</strong> HTML, CSS, JavaScript</p>
-        <p><strong>Description:</strong> Developed a tour booking system allowing users to search and book tours, leave reviews, receive personalized tour suggestions, and interact with a customer support chatbox.</p>
-        <p><strong>Result:</strong> Improved booking management and enhanced user experience through intelligent tour recommendations.</p>
-      </div>
-    </div>
-    
-    <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
-      <div class="card p-4 h-100">
-        <h5>
-          Smart Real Estate Trading Platform 
-          <a href="https://github.com/TranBaoDuy-hutech/DACS_BDS" target="_blank" class="project-link" title="View on GitHub">🔗</a>
-        </h5>
-        <p><strong>Duration:</strong> 09/2024 – 12/2024</p>
-        <p><strong>Backend:</strong> PHP (MVC), MySQL, Machine Learning</p>
-        <p><strong>Frontend:</strong> HTML, CSS, JavaScript</p>
-        <p><strong>Description:</strong> Developed a platform for posting, searching, and filtering real estate by price, location, and area, with AI-powered price prediction and personalized property recommendations.</p>
-        <p><strong>Result:</strong> Enabled users to search properties efficiently, with accurate price forecasts and tailored recommendations.</p>
-      </div>
-    </div>
-    
-    <div class="col-lg-6" data-aos="fade-up" data-aos-delay="300">
-      <div class="card p-4 h-100">
-        <h5>
-          Tour Booking Mobile App 
-          <a href="https://github.com/TranBaoDuy-hutech/travelapp" target="_blank" class="project-link" title="View on GitHub">🔗</a>
-        </h5>
-        <p><strong>Duration:</strong> 08/2024 – 10/2024</p>
-        <p><strong>Frontend:</strong> Flutter, Dart</p>
-        <p><strong>Backend:</strong> REST API (Python), SQL Server</p>
-        <p><strong>Description:</strong> Developed a mobile app for customers to book tours, make online payments, manage profiles, leave reviews, track bookings, and interact with real-time customer support.</p>
-        <p><strong>Result:</strong> Enhanced user convenience and ensured seamless data synchronization with the web system.</p>
-      </div>
-    </div>
-
-    <div class="col-lg-6" data-aos="fade-up" data-aos-delay="400">
-      <div class="card p-4 h-100">
-        <h5>
-          Real-time Customer Feedback System 
-          <a href="https://github.com/TranBaoDuy-hutech/travelapp" target="_blank" class="project-link" title="View on GitHub">🔗</a>
-        </h5>
-        <p><strong>Duration:</strong> 08/2024 – 10/2024</p>
-        <p><strong>Frontend:</strong> Flutter, Dart</p>
-        <p><strong>Backend:</strong> Python (FastAPI), WebSocket, SQL Server</p>
-        <p><strong>Description:</strong> Built a real-time feedback system that allows customers to send comments, ratings, and messages instantly during their travel experience. Integrated WebSocket for live two-way communication between users and customer support.</p>
-        <p><strong>Result:</strong> Improved user engagement and response time by 60%, ensuring smooth and instant feedback synchronization across all connected clients.</p>
-      </div>
-    </div>
-
-    <div class="col-lg-6" data-aos="fade-up" data-aos-delay="500">
-      <div class="card p-4 h-100">
-        <h5>
-          3D Tourism Website – Promoting An Giang Tourism
-          <a href="https://github.com/TranBaoDuy-hutech/travelapp3d" target="_blank" class="project-link" title="View on GitHub">🔗</a>
-        </h5>
-        <p><strong>Duration:</strong> 09/2025 – 12/2025</p>
-        <p><strong>Frontend:</strong> Flutter + WebGL/Three.js</p>
-        <p><strong>Backend:</strong> REST API + SQL Server</p>
-        <p><strong>Description:</strong> Developed a website enabling users to experience 3D/360° tours of key attractions and virtual tours.</p>
-        <p><strong>Result:</strong> Effectively promoted local tourism and provided an immersive user experience.</p>
-      </div>
-    </div>
-
-    <div class="col-lg-6" data-aos="fade-up" data-aos-delay="600">
-      <div class="card p-4 h-100">
-        <h5>
-          3D Tourism Website – Smart Travel Platform
-          <a href="https://github.com/TranBaoDuy-hutech/DOAN_J2EE" target="_blank" class="project-link" title="View on GitHub">🔗</a>
-        </h5>
-        <p><strong>Duration:</strong> 01/2026 – 03/2026</p>
-        <p><strong>Backend:</strong> Spring Boot, REST API, MySQL</p>
-        <p><strong>Frontend:</strong> HTML, CSS, JavaScript, Three.js (3D)</p>
-        <p><strong>Description:</strong> Developed a smart tourism website using Spring Boot that allows users to explore destinations through interactive 3D environments. The system supports tour searching, booking, reviews, and virtual 3D tours of tourist attractions.</p>
-        <p><strong>Result:</strong> Provided an immersive travel experience with 3D visualization, improving user engagement and helping users explore destinations before booking tours.</p>
-      </div>
-    </div>
-
-    <div class="col-lg-6" data-aos="fade-up" data-aos-delay="700">
-      <div class="card p-4 h-100">
-        <h5>
-          Online Movie Streaming Website
-          <a href="https://github.com/TranBaoDuy-hutech/movie-streaming-nodejs" target="_blank" class="project-link" title="View on GitHub">🔗</a>
-        </h5>
-        <p><strong>Duration:</strong> 01/2026 – 03/2026</p>
-        <p><strong>Backend:</strong> Node.js, Express.js, MySQL, RESTful API</p>
-        <p><strong>Frontend:</strong> HTML, CSS, JavaScript, Bootstrap</p>
-        <p><strong>Description:</strong> Developed an online movie streaming website that allows users to browse movies by genre, search for films, watch trailers, and stream video content. The system includes user authentication, watch history tracking, and an admin dashboard for managing movies, categories, and users.</p>
-        <p><strong>Result:</strong> Delivered a scalable movie platform with efficient content management and an intuitive interface, improving user engagement and streaming accessibility.</p>
-      </div>
-    </div>
-
-  </div>
-</section>
-
-<!-- Certificates Section -->
-<section id="certificates">
-  <div class="container" data-aos="fade-up">
-    <h2 class="fw-bold text-center">Certificates & Achievements</h2>
-    <div class="row g-4">
-      <div class="col-lg-4 col-md-6" data-aos="zoom-in">
-        <div class="card p-4 h-100 text-center">
-          <h6 class="mb-3">Parkinson Detection From Voice Data</h6>
-          <p class="text-muted mb-3">IBM Skills Network – Cognitive Class<br><small>September 2024</small></p>
-          <a href="https://courses.cognitiveclass.ai/certificates/005ea97b440e483d8e10823531ea16e0" target="_blank" class="btn btn-warning btn-sm">View Credential</a>
-        </div>
-      </div>
-      <div class="col-lg-4 col-md-6" data-aos="zoom-in" data-aos-delay="100">
-        <div class="card p-4 h-100 text-center">
-          <h6 class="mb-3">Parkinson Detector App Deployment</h6>
-          <p class="text-muted mb-3">iBest Workshop, IBM Skills Network<br><small>September 2024</small></p>
-          <a href="https://courses.cognitiveclass.ai/certificates/a67d732e32db4d2da2eda3560cbd5e8e" target="_blank" class="btn btn-warning btn-sm">View Credential</a>
-        </div>
-      </div>
-      <div class="col-lg-4 col-md-6" data-aos="zoom-in" data-aos-delay="200">
-        <div class="card p-4 h-100 text-center">
-          <h6 class="mb-3">Cancer Image Detection With PyTorch</h6>
-          <p class="text-muted mb-3">iBest Workshop, IBM Skills Network<br><small>September 2024</small></p>
-          <a href="https://courses.cognitiveclass.ai/certificates/d0989f2a370e438f8bc60f76d4da5e16" target="_blank" class="btn btn-warning btn-sm">View Credential</a>
-        </div>
-      </div>
-      <div class="col-lg-6" data-aos="zoom-in" data-aos-delay="300">
-        <div class="card p-4 h-100 text-center">
-          <h6 class="mb-3">CEF B1 Certificate</h6>
-          <p class="text-muted mb-0">Ho Chi Minh City University of Technology (HUTECH)</p>
-        </div>
-      </div>
-      <div class="col-lg-6" data-aos="zoom-in" data-aos-delay="400">
-        <div class="card p-4 h-100 text-center">
-          <h6 class="mb-3">Communication and Teamwork Skills</h6>
-          <p class="text-muted mb-0">Ho Chi Minh City University of Technology (HUTECH)</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- Contact Section -->
-<section id="contact">
-  <div class="container text-center" data-aos="fade-up">
-    <h2 class="fw-bold mb-4">Let's Connect</h2>
-    <p class="mb-5 fs-5" style="color: rgba(255, 255, 255, 0.8);">Feel free to reach out for collaborations or just a friendly hello</p>
+  <!-- About Section -->
+  <section id="about" class="container" data-aos="fade-up">
+    <h2 class="fw-bold text-center">About Me</h2>
     <div class="row justify-content-center">
-      <div class="col-lg-10">
-        <div class="row g-4">
-          <div class="col-md-6" data-aos="fade-up" data-aos-delay="50">
-            <div class="p-4 rounded" style="background: rgba(255, 255, 255, 0.05); backdrop-filter: blur(10px);">
-              <h5>📧 Email</h5>
-              <p><a href="mailto:baoduy10072004@gmail.com" class="contact-link">baoduy10072004@gmail.com</a></p>
+      <div class="col-lg-9">
+        <p class="text-center fs-5">
+          I am a <strong>Recent Software Engineering graduate</strong> from
+          <strong>Ho Chi Minh City University of Technology (HUTECH)</strong>
+          with hands-on experience in developing <strong>full-stack web and mobile applications</strong>.
+          I have worked with technologies such as <strong>Java Spring Boot, ASP.NET Core, PHP MVC, Flutter, and Python
+            (Flask/FastAPI)</strong>
+          to build scalable systems and RESTful APIs.
+          <br><br>
+
+          I have delivered <strong>4+ end-to-end projects</strong>, including tour booking platforms,
+          real estate trading systems, mobile travel applications, and 3D tourism websites.
+          These projects incorporate <strong>machine learning, real-time features, and 3D visualization</strong>.
+          <br><br>
+
+          With strong problem-solving skills, a proactive mindset, and a passion for learning,
+          I aim to become a <strong>Full-Stack Developer</strong> who contributes to impactful products
+          and grows in a professional, high-performance environment.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills Section -->
+  <section id="skills">
+    <div class="container" data-aos="fade-up">
+      <h2 class="fw-bold text-center">Technical Skills</h2>
+
+      <!-- Programming Languages -->
+      <div class="row mb-5">
+        <div class="col-12">
+          <h4 class="text-danger">💻 Programming Languages</h4>
+          <div class="row g-4">
+            <div class="col-lg-3 col-md-4 col-sm-6">
+              <div class="skill-card">
+                <h6>Java</h6>
+                <p class="mb-0">Spring Boot development</p>
+              </div>
             </div>
-          </div>
-          <div class="col-md-6" data-aos="fade-up" data-aos-delay="100">
-            <div class="p-4 rounded" style="background: rgba(255, 255, 255, 0.05); backdrop-filter: blur(10px);">
-              <h5>📱 Phone</h5>
-              <p><a href="tel:0329810650" class="contact-link">0329810650</a></p>
+
+            <div class="col-lg-3 col-md-4 col-sm-6">
+              <div class="skill-card">
+                <h6>C#</h6>
+                <p class="mb-0">.NET development</p>
+              </div>
             </div>
-          </div>
-          <div class="col-md-6" data-aos="fade-up" data-aos-delay="150">
-            <div class="p-4 rounded" style="background: rgba(255, 255, 255, 0.05); backdrop-filter: blur(10px);">
-              <h5>💻 GitHub</h5>
-              <p><a href="https://github.com/TranBaoDuy-hutech" target="_blank" class="contact-link">github.com/TranBaoDuy-hutech</a></p>
+
+            <div class="col-lg-3 col-md-4 col-sm-6">
+              <div class="skill-card">
+                <h6>PHP</h6>
+                <p class="mb-0">MVC web development</p>
+              </div>
             </div>
-          </div>
-          <div class="col-md-6" data-aos="fade-up" data-aos-delay="200">
-            <div class="p-4 rounded" style="background: rgba(255, 255, 255, 0.05); backdrop-filter: blur(10px);">
-              <h5>💼 LinkedIn</h5>
-              <p><a href="https://linkedin.com/in/tranbao-duy" target="_blank" class="contact-link">linkedin.com/in/tranbao-duy</a></p>
-            </div>
-          </div>
-          <div class="col-md-6" data-aos="fade-up" data-aos-delay="250">
-            <div class="p-4 rounded" style="background: rgba(255, 255, 255, 0.05); backdrop-filter: blur(10px);">
-              <h5>📘 Facebook</h5>
-              <p><a href="https://www.facebook.com/tranbaoduy.1007" target="_blank" class="contact-link">facebook.com/tranbaoduy.1007</a></p>
-            </div>
-          </div>
-          <div class="col-md-6" data-aos="fade-up" data-aos-delay="300">
-            <div class="p-4 rounded" style="background: rgba(255, 255, 255, 0.05); backdrop-filter: blur(10px);">
-              <h5>📸 Instagram</h5>
-              <p><a href="https://www.instagram.com/tranbaoduy.1007" target="_blank" class="contact-link">instagram.com/tranbaoduy.1007</a></p>
-            </div>
-          </div>
-          <div class="col-12" data-aos="fade-up" data-aos-delay="350">
-            <div class="p-4 rounded" style="background: rgba(255, 255, 255, 0.05); backdrop-filter: blur(10px);">
-              <h5>📍 Address</h5>
-              <p class="mb-0">104, 179 Street, Tang Nhon Phu Ward<br>Ho Chi Minh City, Vietnam</p>
+
+            <div class="col-lg-3 col-md-4 col-sm-6">
+              <div class="skill-card">
+                <h6>Python</h6>
+                <p class="mb-0">Flask / FastAPI APIs</p>
+              </div>
             </div>
           </div>
         </div>
-      </div>  
+      </div>
+
+      <!-- Backend Development -->
+      <div class="row mb-5">
+        <div class="col-12">
+          <h4 class="text-primary">⚙️ Backend Development</h4>
+          <div class="row g-4">
+
+            <div class="col-lg-3 col-md-4 col-sm-6">
+              <div class="skill-card">
+                <h6>Spring Boot</h6>
+                <p class="mb-0">Java web framework</p>
+              </div>
+            </div>
+
+            <div class="col-lg-3 col-md-4 col-sm-6">
+              <div class="skill-card">
+                <h6>ASP.NET Core</h6>
+                <p class="mb-0">Web API & MVC</p>
+              </div>
+            </div>
+
+            <div class="col-lg-3 col-md-4 col-sm-6">
+              <div class="skill-card">
+                <h6>Node.js</h6>
+                <p class="mb-0">Express.js backend</p>
+              </div>
+            </div>
+
+            <div class="col-lg-3 col-md-4 col-sm-6">
+              <div class="skill-card">
+                <h6>RESTful API</h6>
+                <p class="mb-0">API architecture</p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+      <!-- Frontend Development -->
+      <div class="row mb-5">
+        <div class="col-12">
+          <h4 class="text-success">🌐 Frontend Development</h4>
+          <div class="row g-4">
+
+            <div class="col-lg-3 col-md-4 col-sm-6">
+              <div class="skill-card">
+                <h6>HTML</h6>
+                <p class="mb-0">Web structure</p>
+              </div>
+            </div>
+
+            <div class="col-lg-3 col-md-4 col-sm-6">
+              <div class="skill-card">
+                <h6>CSS</h6>
+                <p class="mb-0">Responsive design</p>
+              </div>
+            </div>
+
+            <div class="col-lg-3 col-md-4 col-sm-6">
+              <div class="skill-card">
+                <h6>JavaScript</h6>
+                <p class="mb-0">Frontend logic</p>
+              </div>
+            </div>
+
+            <div class="col-lg-3 col-md-4 col-sm-6">
+              <div class="skill-card">
+                <h6>Three.js</h6>
+                <p class="mb-0">3D web rendering</p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+      <!-- Mobile Development -->
+      <div class="row mb-5">
+        <div class="col-12">
+          <h4 class="text-warning">📱 Mobile Development</h4>
+          <div class="row g-4">
+
+            <div class="col-lg-3 col-md-4 col-sm-6">
+              <div class="skill-card">
+                <h6>Flutter</h6>
+                <p class="mb-0">Cross-platform mobile</p>
+              </div>
+            </div>
+
+            <div class="col-lg-3 col-md-4 col-sm-6">
+              <div class="skill-card">
+                <h6>Dart</h6>
+                <p class="mb-0">Flutter programming</p>
+              </div>
+            </div>
+
+            <div class="col-lg-3 col-md-4 col-sm-6">
+              <div class="skill-card">
+                <h6>Provider / Bloc</h6>
+                <p class="mb-0">State management</p>
+              </div>
+            </div>
+
+            <div class="col-lg-3 col-md-4 col-sm-6">
+              <div class="skill-card">
+                <h6>REST API</h6>
+                <p class="mb-0">Mobile API integration</p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+      <!-- Database -->
+      <div class="row mb-5">
+        <div class="col-12">
+          <h4 class="text-info">🗄️ Database</h4>
+          <div class="row g-4">
+
+            <div class="col-lg-4 col-md-6">
+              <div class="skill-card">
+                <h6>SQL Server</h6>
+                <p class="mb-0">Microsoft database</p>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6">
+              <div class="skill-card">
+                <h6>MySQL</h6>
+                <p class="mb-0">Relational database</p>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6">
+              <div class="skill-card">
+                <h6>PostgreSQL</h6>
+                <p class="mb-0">Advanced database</p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+      <!-- Development Tools -->
+      <div class="row mb-5">
+        <div class="col-12">
+          <h4 class="text-secondary">🛠️ Development Tools</h4>
+          <div class="row g-4">
+
+            <div class="col-lg-3 col-md-4 col-sm-6">
+              <div class="skill-card">
+                <h6>VS Code</h6>
+                <p class="mb-0">Code editor</p>
+              </div>
+            </div>
+
+            <div class="col-lg-3 col-md-4 col-sm-6">
+              <div class="skill-card">
+                <h6>IntelliJ IDEA</h6>
+                <p class="mb-0">Java & Spring Boot IDE</p>
+              </div>
+            </div>
+
+            <div class="col-lg-3 col-md-4 col-sm-6">
+              <div class="skill-card">
+                <h6>Visual Studio</h6>
+                <p class="mb-0">.NET IDE</p>
+              </div>
+            </div>
+
+            <div class="col-lg-3 col-md-4 col-sm-6">
+              <div class="skill-card">
+                <h6>Android Studio</h6>
+                <p class="mb-0">Mobile development</p>
+              </div>
+            </div>
+
+            <div class="col-lg-3 col-md-4 col-sm-6">
+              <div class="skill-card">
+                <h6>Git / GitHub</h6>
+                <p class="mb-0">Version control</p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+      <!-- Design & Testing -->
+      <div class="row mb-5">
+        <div class="col-12">
+          <h4 class="text-dark">🎨 Design & Testing</h4>
+          <div class="row g-4">
+
+            <div class="col-lg-3 col-md-4 col-sm-6">
+              <div class="skill-card">
+                <h6>Figma</h6>
+                <p class="mb-0">UI/UX design</p>
+              </div>
+            </div>
+
+            <div class="col-lg-3 col-md-4 col-sm-6">
+              <div class="skill-card">
+                <h6>Canva</h6>
+                <p class="mb-0">Design tool</p>
+              </div>
+            </div>
+
+            <div class="col-lg-3 col-md-4 col-sm-6">
+              <div class="skill-card">
+                <h6>Postman</h6>
+                <p class="mb-0">API testing</p>
+              </div>
+            </div>
+
+            <div class="col-lg-3 col-md-4 col-sm-6">
+              <div class="skill-card">
+                <h6>Swagger</h6>
+                <p class="mb-0">API documentation</p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+      <!-- Soft Skills -->
+      <div class="row">
+        <div class="col-12">
+          <h4 class="text-secondary">💼 Professional Skills</h4>
+          <div class="row g-4">
+            <div class="col-lg-2 col-md-4 col-sm-6">
+              <div class="skill-card" data-aos="zoom-in" data-aos-delay="50">
+                <h6>Teamwork</h6>
+                <p class="mb-0">Collaboration</p>
+              </div>
+            </div>
+            <div class="col-lg-2 col-md-4 col-sm-6">
+              <div class="skill-card" data-aos="zoom-in" data-aos-delay="100">
+                <h6>Communication</h6>
+                <p class="mb-0">Interpersonal</p>
+              </div>
+            </div>
+            <div class="col-lg-2 col-md-4 col-sm-6">
+              <div class="skill-card" data-aos="zoom-in" data-aos-delay="150">
+                <h6>Management</h6>
+                <p class="mb-0">Organization</p>
+              </div>
+            </div>
+            <div class="col-lg-2 col-md-4 col-sm-6">
+              <div class="skill-card" data-aos="zoom-in" data-aos-delay="200">
+                <h6>Self-learning</h6>
+                <p class="mb-0">Adaptability</p>
+              </div>
+            </div>
+            <div class="col-lg-2 col-md-4 col-sm-6">
+              <div class="skill-card" data-aos="zoom-in" data-aos-delay="250">
+                <h6>Problem Solving</h6>
+                <p class="mb-0">Analysis</p>
+              </div>
+            </div>
+            <div class="col-lg-2 col-md-4 col-sm-6">
+              <div class="skill-card" data-aos="zoom-in" data-aos-delay="300">
+                <h6>MS Office</h6>
+                <p class="mb-0">Productivity</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
     </div>
-  </div>
-</section>
-<!-- Footer -->
-<footer>
-  <div class="container">
-    <p class="mb-2">&copy; 2025 TRAN BAO DUY. All rights reserved.</p>
-    <p class="mb-0">Designed & Developed by Tran Bao Duy</p>
-  </div>
-</footer>
+  </section>
 
-<!-- Scroll to top button -->
-<div class="scroll-top" id="scrollTop"></div>
+  <!-- Projects Section -->
+  <section id="projects" class="container">
+    <h2 class="fw-bold text-center" data-aos="fade-up">Featured Projects</h2>
+    <div class="row g-4">
 
-<!-- Scripts -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
-<script>
-  document.addEventListener("DOMContentLoaded", function () {
-    
-    // Initialize AOS
-    AOS.init({ 
-      duration: 800, 
-      once: true,
-      offset: 100,
-      easing: 'ease-in-out'
-    });
+      <div class="col-lg-6" data-aos="fade-up">
+        <div class="card p-4 h-100">
+          <h5>
+            Bookstore Management Software
+            <a href="https://github.com/TranBaoDuy-hutech/DOAN_WINDOWS" target="_blank" class="project-link"
+              title="View on GitHub">🔗</a>
+          </h5>
+          <p><strong>Duration:</strong> 07/2024 – 09/2024</p>
+          <p><strong>Backend:</strong> C# (WinForms), SQL Server</p>
+          <p><strong>Frontend:</strong> Windows Forms, DataGridView, TextBox, Button</p>
+          <p><strong>Description:</strong> Developed a comprehensive bookstore management system supporting CRUD
+            operations for products, customer management, invoices, inventory, and sales reporting.</p>
+          <p><strong>Result:</strong> Automated inventory management, improved sales efficiency, reduced errors, and
+            saved management time.</p>
+        </div>
+      </div>
 
-    // Navbar scroll effect
-    const navbar = document.querySelector('nav');
-    const sections = document.querySelectorAll('section');
-    const navLinks = document.querySelectorAll('.nav-link');
-    const scrollTop = document.getElementById('scrollTop');
+      <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+        <div class="card p-4 h-100">
+          <h5>
+            Website Tour Booking System
+            <a href="https://github.com/TranBaoDuy-hutech/DOAN_LTWeb" target="_blank" class="project-link"
+              title="View on GitHub">🔗</a>
+          </h5>
+          <p><strong>Duration:</strong> 09/2024 – 11/2024</p>
+          <p><strong>Backend:</strong> ASP.NET Core + SQL Server, RESTful API, Machine Learning</p>
+          <p><strong>Frontend:</strong> HTML, CSS, JavaScript</p>
+          <p><strong>Description:</strong> Developed a tour booking system allowing users to search and book tours,
+            leave reviews, receive personalized tour suggestions, and interact with a customer support chatbox.</p>
+          <p><strong>Result:</strong> Improved booking management and enhanced user experience through intelligent tour
+            recommendations.</p>
+        </div>
+      </div>
 
-    function handleScroll() {
-      // Navbar background
-      if (window.scrollY > 50) {
-        navbar.classList.add('scrolled');
-      } else {
-        navbar.classList.remove('scrolled');
+      <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
+        <div class="card p-4 h-100">
+          <h5>
+            Smart Real Estate Trading Platform
+            <a href="https://github.com/TranBaoDuy-hutech/DACS_BDS" target="_blank" class="project-link"
+              title="View on GitHub">🔗</a>
+          </h5>
+          <p><strong>Duration:</strong> 09/2024 – 12/2024</p>
+          <p><strong>Backend:</strong> PHP (MVC), MySQL, Machine Learning</p>
+          <p><strong>Frontend:</strong> HTML, CSS, JavaScript</p>
+          <p><strong>Description:</strong> Developed a platform for posting, searching, and filtering real estate by
+            price, location, and area, with AI-powered price prediction and personalized property recommendations.</p>
+          <p><strong>Result:</strong> Enabled users to search properties efficiently, with accurate price forecasts and
+            tailored recommendations.</p>
+        </div>
+      </div>
+
+      <div class="col-lg-6" data-aos="fade-up" data-aos-delay="300">
+        <div class="card p-4 h-100">
+          <h5>
+            Tour Booking Mobile App
+            <a href="https://github.com/TranBaoDuy-hutech/travelapp" target="_blank" class="project-link"
+              title="View on GitHub">🔗</a>
+          </h5>
+          <p><strong>Duration:</strong> 08/2024 – 10/2024</p>
+          <p><strong>Frontend:</strong> Flutter, Dart</p>
+          <p><strong>Backend:</strong> REST API (Python), SQL Server</p>
+          <p><strong>Description:</strong> Developed a mobile app for customers to book tours, make online payments,
+            manage profiles, leave reviews, track bookings, and interact with real-time customer support.</p>
+          <p><strong>Result:</strong> Enhanced user convenience and ensured seamless data synchronization with the web
+            system.</p>
+        </div>
+      </div>
+
+      <div class="col-lg-6" data-aos="fade-up" data-aos-delay="400">
+        <div class="card p-4 h-100">
+          <h5>
+            Real-time Customer Feedback System
+            <a href="https://github.com/TranBaoDuy-hutech/travelapp" target="_blank" class="project-link"
+              title="View on GitHub">🔗</a>
+          </h5>
+          <p><strong>Duration:</strong> 08/2024 – 10/2024</p>
+          <p><strong>Frontend:</strong> Flutter, Dart</p>
+          <p><strong>Backend:</strong> Python (FastAPI), WebSocket, SQL Server</p>
+          <p><strong>Description:</strong> Built a real-time feedback system that allows customers to send comments,
+            ratings, and messages instantly during their travel experience. Integrated WebSocket for live two-way
+            communication between users and customer support.</p>
+          <p><strong>Result:</strong> Improved user engagement and response time by 60%, ensuring smooth and instant
+            feedback synchronization across all connected clients.</p>
+        </div>
+      </div>
+
+      <div class="col-lg-6" data-aos="fade-up" data-aos-delay="500">
+        <div class="card p-4 h-100">
+          <h5>
+            3D Tourism Website – Promoting An Giang Tourism
+            <a href="https://github.com/TranBaoDuy-hutech/travelapp3d" target="_blank" class="project-link"
+              title="View on GitHub">🔗</a>
+          </h5>
+          <p><strong>Duration:</strong> 09/2025 – 12/2025</p>
+          <p><strong>Frontend:</strong> Flutter + WebGL/Three.js</p>
+          <p><strong>Backend:</strong> REST API + SQL Server</p>
+          <p><strong>Description:</strong> Developed a website enabling users to experience 3D/360° tours of key
+            attractions and virtual tours.</p>
+          <p><strong>Result:</strong> Effectively promoted local tourism and provided an immersive user experience.</p>
+        </div>
+      </div>
+
+      <div class="col-lg-6" data-aos="fade-up" data-aos-delay="600">
+        <div class="card p-4 h-100">
+          <h5>
+            3D Tourism Website – Smart Travel Platform
+            <a href="https://github.com/TranBaoDuy-hutech/DOAN_J2EE" target="_blank" class="project-link"
+              title="View on GitHub">🔗</a>
+          </h5>
+          <p><strong>Duration:</strong> 01/2026 – 03/2026</p>
+          <p><strong>Backend:</strong> Spring Boot, REST API, MySQL</p>
+          <p><strong>Frontend:</strong> HTML, CSS, JavaScript, Three.js (3D)</p>
+          <p><strong>Description:</strong> Developed a smart tourism website using Spring Boot that allows users to
+            explore destinations through interactive 3D environments. The system supports tour searching, booking,
+            reviews, and virtual 3D tours of tourist attractions.</p>
+          <p><strong>Result:</strong> Provided an immersive travel experience with 3D visualization, improving user
+            engagement and helping users explore destinations before booking tours.</p>
+        </div>
+      </div>
+
+      <div class="col-lg-6" data-aos="fade-up" data-aos-delay="700">
+        <div class="card p-4 h-100">
+          <h5>
+            Online Movie Streaming Website
+            <a href="https://github.com/TranBaoDuy-hutech/movie-streaming-nodejs" target="_blank" class="project-link"
+              title="View on GitHub">🔗</a>
+          </h5>
+          <p><strong>Duration:</strong> 01/2026 – 03/2026</p>
+          <p><strong>Backend:</strong> Node.js, Express.js, MySQL, RESTful API</p>
+          <p><strong>Frontend:</strong> HTML, CSS, JavaScript, Bootstrap</p>
+          <p><strong>Description:</strong> Developed an online movie streaming website that allows users to browse
+            movies by genre, search for films, watch trailers, and stream video content. The system includes user
+            authentication, watch history tracking, and an admin dashboard for managing movies, categories, and users.
+          </p>
+          <p><strong>Result:</strong> Delivered a scalable movie platform with efficient content management and an
+            intuitive interface, improving user engagement and streaming accessibility.</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Certificates Section -->
+  <section id="certificates">
+    <div class="container" data-aos="fade-up">
+      <h2 class="fw-bold text-center">Certificates & Achievements</h2>
+      <div class="row g-4">
+        <div class="col-lg-4 col-md-6" data-aos="zoom-in">
+          <div class="card p-4 h-100 text-center">
+            <h6 class="mb-3">Parkinson Detection From Voice Data</h6>
+            <p class="text-muted mb-3">IBM Skills Network – Cognitive Class<br><small>September 2024</small></p>
+            <a href="https://courses.cognitiveclass.ai/certificates/005ea97b440e483d8e10823531ea16e0" target="_blank"
+              class="btn btn-warning btn-sm">View Credential</a>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6" data-aos="zoom-in" data-aos-delay="100">
+          <div class="card p-4 h-100 text-center">
+            <h6 class="mb-3">Parkinson Detector App Deployment</h6>
+            <p class="text-muted mb-3">iBest Workshop, IBM Skills Network<br><small>September 2024</small></p>
+            <a href="https://courses.cognitiveclass.ai/certificates/a67d732e32db4d2da2eda3560cbd5e8e" target="_blank"
+              class="btn btn-warning btn-sm">View Credential</a>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6" data-aos="zoom-in" data-aos-delay="200">
+          <div class="card p-4 h-100 text-center">
+            <h6 class="mb-3">Cancer Image Detection With PyTorch</h6>
+            <p class="text-muted mb-3">iBest Workshop, IBM Skills Network<br><small>September 2024</small></p>
+            <a href="https://courses.cognitiveclass.ai/certificates/d0989f2a370e438f8bc60f76d4da5e16" target="_blank"
+              class="btn btn-warning btn-sm">View Credential</a>
+          </div>
+        </div>
+        <div class="col-lg-6" data-aos="zoom-in" data-aos-delay="300">
+          <div class="card p-4 h-100 text-center">
+            <h6 class="mb-3">CEF B1 Certificate</h6>
+            <p class="text-muted mb-0">Ho Chi Minh City University of Technology (HUTECH)</p>
+          </div>
+        </div>
+        <div class="col-lg-6" data-aos="zoom-in" data-aos-delay="400">
+          <div class="card p-4 h-100 text-center">
+            <h6 class="mb-3">Communication and Teamwork Skills</h6>
+            <p class="text-muted mb-0">Ho Chi Minh City University of Technology (HUTECH)</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact">
+    <div class="container text-center" data-aos="fade-up">
+      <h2 class="fw-bold mb-4">Let's Connect</h2>
+      <p class="mb-5 fs-5" style="color: rgba(255, 255, 255, 0.8);">Feel free to reach out for collaborations or just a
+        friendly hello</p>
+      <div class="row justify-content-center">
+        <div class="col-lg-10">
+          <div class="row g-4">
+            <div class="col-md-6" data-aos="fade-up" data-aos-delay="50">
+              <div class="p-4 rounded" style="background: rgba(255, 255, 255, 0.05); backdrop-filter: blur(10px);">
+                <h5>📧 Email</h5>
+                <p><a href="mailto:baoduy10072004@gmail.com" class="contact-link">baoduy10072004@gmail.com</a></p>
+              </div>
+            </div>
+            <div class="col-md-6" data-aos="fade-up" data-aos-delay="100">
+              <div class="p-4 rounded" style="background: rgba(255, 255, 255, 0.05); backdrop-filter: blur(10px);">
+                <h5>📱 Phone</h5>
+                <p><a href="tel:0329810650" class="contact-link">0329810650</a></p>
+              </div>
+            </div>
+            <div class="col-md-6" data-aos="fade-up" data-aos-delay="150">
+              <div class="p-4 rounded" style="background: rgba(255, 255, 255, 0.05); backdrop-filter: blur(10px);">
+                <h5>💻 GitHub</h5>
+                <p><a href="https://github.com/TranBaoDuy-hutech" target="_blank"
+                    class="contact-link">github.com/TranBaoDuy-hutech</a></p>
+              </div>
+            </div>
+            <div class="col-md-6" data-aos="fade-up" data-aos-delay="200">
+              <div class="p-4 rounded" style="background: rgba(255, 255, 255, 0.05); backdrop-filter: blur(10px);">
+                <h5>💼 LinkedIn</h5>
+                <p><a href="https://linkedin.com/in/tranbao-duy" target="_blank"
+                    class="contact-link">linkedin.com/in/tranbao-duy</a></p>
+              </div>
+            </div>
+            <div class="col-md-6" data-aos="fade-up" data-aos-delay="250">
+              <div class="p-4 rounded" style="background: rgba(255, 255, 255, 0.05); backdrop-filter: blur(10px);">
+                <h5>📘 Facebook</h5>
+                <p><a href="https://www.facebook.com/tranbaoduy.1007" target="_blank"
+                    class="contact-link">facebook.com/tranbaoduy.1007</a></p>
+              </div>
+            </div>
+            <div class="col-md-6" data-aos="fade-up" data-aos-delay="300">
+              <div class="p-4 rounded" style="background: rgba(255, 255, 255, 0.05); backdrop-filter: blur(10px);">
+                <h5>📸 Instagram</h5>
+                <p><a href="https://www.instagram.com/tranbaoduy.1007" target="_blank"
+                    class="contact-link">instagram.com/tranbaoduy.1007</a></p>
+              </div>
+            </div>
+            <div class="col-12" data-aos="fade-up" data-aos-delay="350">
+              <div class="p-4 rounded" style="background: rgba(255, 255, 255, 0.05); backdrop-filter: blur(10px);">
+                <h5>📍 Address</h5>
+                <p class="mb-0">104, 179 Street, Tang Nhon Phu Ward<br>Ho Chi Minh City, Vietnam</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <p class="mb-2">&copy; 2025 TRAN BAO DUY. All rights reserved.</p>
+      <p class="mb-0">Designed & Developed by Tran Bao Duy</p>
+    </div>
+  </footer>
+
+  <!-- Scroll to top button -->
+  <div class="scroll-top" id="scrollTop"></div>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+
+      // Initialize AOS
+      AOS.init({
+        duration: 800,
+        once: true,
+        offset: 100,
+        easing: 'ease-in-out'
+      });
+
+      // Navbar scroll effect
+      const navbar = document.querySelector('nav');
+      const sections = document.querySelectorAll('section');
+      const navLinks = document.querySelectorAll('.nav-link');
+      const scrollTop = document.getElementById('scrollTop');
+
+      function handleScroll() {
+        // Navbar background
+        if (window.scrollY > 50) {
+          navbar.classList.add('scrolled');
+        } else {
+          navbar.classList.remove('scrolled');
+        }
+
+        // Scroll to top button
+        if (window.scrollY > 500) {
+          scrollTop.classList.add('visible');
+        } else {
+          scrollTop.classList.remove('visible');
+        }
+
+        // Active nav link
+        let current = '';
+        const scrollPos = window.pageYOffset + 150;
+
+        sections.forEach(section => {
+          const sectionTop = section.offsetTop;
+          const sectionHeight = section.offsetHeight;
+
+          if (scrollPos >= sectionTop && scrollPos < sectionTop + sectionHeight) {
+            current = section.getAttribute('id');
+          }
+        });
+
+        navLinks.forEach(link => {
+          link.classList.remove('active');
+          if (link.getAttribute('href') === '#' + current) {
+            link.classList.add('active');
+          }
+        });
       }
 
-      // Scroll to top button
-      if (window.scrollY > 500) {
-        scrollTop.classList.add('visible');
-      } else {
-        scrollTop.classList.remove('visible');
+      window.addEventListener('scroll', handleScroll);
+      handleScroll();
+
+      // Scroll to top functionality
+      scrollTop.addEventListener('click', () => {
+        window.scrollTo({
+          top: 0,
+          behavior: 'smooth'
+        });
+      });
+
+      // Smooth scrolling
+      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+          e.preventDefault();
+          const target = document.querySelector(this.getAttribute('href'));
+          if (target) {
+            window.scrollTo({
+              top: target.offsetTop - 80,
+              behavior: 'smooth'
+            });
+          }
+        });
+      });
+
+      // Typing effect for role
+      const text = "Software Engineering at HUTECH";
+      const typingElement = document.querySelector(".role.typing");
+      let index = 0;
+
+      function type() {
+        if (index < text.length) {
+          typingElement.textContent += text.charAt(index);
+          index++;
+          setTimeout(type, 100);
+        } else {
+          setTimeout(() => {
+            typingElement.textContent = "";
+            index = 0;
+            type();
+          }, 2000);
+        }
       }
 
-      // Active nav link
-      let current = '';
-      const scrollPos = window.pageYOffset + 150;
-      
-      sections.forEach(section => {
-        const sectionTop = section.offsetTop;
-        const sectionHeight = section.offsetHeight;
-        
-        if (scrollPos >= sectionTop && scrollPos < sectionTop + sectionHeight) {
-          current = section.getAttribute('id');
-        }
-      });
+      // Page fade-in
+      document.body.style.opacity = '0';
+      setTimeout(() => {
+        document.body.style.transition = 'opacity 0.5s ease';
+        document.body.style.opacity = '1';
+        type(); // Start typing after fade-in
+      }, 100);
 
-      navLinks.forEach(link => {
-        link.classList.remove('active');
-        if (link.getAttribute('href') === '#' + current) {
-          link.classList.add('active');
-        }
-      });
-    }
-
-    window.addEventListener('scroll', handleScroll);
-    handleScroll();
-
-    // Scroll to top functionality
-    scrollTop.addEventListener('click', () => {
-      window.scrollTo({
-        top: 0,
-        behavior: 'smooth'
-      });
     });
+    // Avatar image rotation
+    const avatars = [
+      "images/BDUY.png",
+      "images/BDUY2.jpg",
+      "images/BDUY3.jpg",
+      "images/avt1.jpg",
+      "images/avt2.jpg",
+    ];
 
-    // Smooth scrolling
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-      anchor.addEventListener('click', function (e) {
-        e.preventDefault();
-        const target = document.querySelector(this.getAttribute('href'));
-        if (target) {
-          window.scrollTo({
-            top: target.offsetTop - 80,
-            behavior: 'smooth'
-          });
-        }
-      });
-    });
-
-    // Typing effect for role
-    const text = "Software Engineering at HUTECH";
-    const typingElement = document.querySelector(".role.typing");
     let index = 0;
+    const avatarImg = document.getElementById("avatar");
 
-    function type() {
-      if (index < text.length) {
-        typingElement.textContent += text.charAt(index);
-        index++;
-        setTimeout(type, 100);
-      } else {
-        setTimeout(() => {
-          typingElement.textContent = "";
-          index = 0;
-          type();
-        }, 2000);
-      }
-    }
+    setInterval(() => {
+      index = (index + 1) % avatars.length;
+      avatarImg.src = avatars[index];
+    }, 3000); // đổi mỗi 3 giây
 
-    // Page fade-in
-    document.body.style.opacity = '0';
-    setTimeout(() => {
-      document.body.style.transition = 'opacity 0.5s ease';
-      document.body.style.opacity = '1';
-      type(); // Start typing after fade-in
-    }, 100);
-
-  });
-  // Avatar image rotation
-  const avatars = [
-    "images/BDUY.png",
-    "images/BDUY2.jpg",
-    "images/BDUY3.jpg",
-    "images/avt1.jpg",
-    "images/avt2.jpg",
-  ];
-
-  let index = 0;
-  const avatarImg = document.getElementById("avatar");
-
-  setInterval(() => {
-    index = (index + 1) % avatars.length;
-    avatarImg.src = avatars[index];
-  }, 3000); // đổi mỗi 3 giây
-
-</script>
+  </script>
 </body>
+
 </html>
