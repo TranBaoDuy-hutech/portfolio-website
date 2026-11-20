@@ -15,7 +15,7 @@ document.addEventListener('DOMContentLoaded', () => {
     nav: ['Giới thiệu', 'Kinh nghiệm', 'Kỹ năng', 'Dự án', 'Chứng chỉ', 'Liên hệ'],
     headings: ['Về tôi', 'Kinh nghiệm làm việc', 'Kỹ năng chuyên môn', 'Dự án tiêu biểu', 'Chứng chỉ & Thành tựu', 'Kết nối với tôi'],
     intro: 'Xin chào, tôi là',
-    role: 'Lập trình viên Full-Stack',
+    role: 'K\u1ef9 s\u01b0 ph\u1ea7n m\u1ec1m | Ph\u00e1t tri\u1ec3n Full-Stack',
     hero: 'Tôi là <strong>kỹ sư Công nghệ thông tin, chuyên ngành Kỹ thuật phần mềm tại HUTECH</strong>, định hướng phát triển <strong>Full-Stack</strong> với kinh nghiệm thực tế trong xây dựng ứng dụng web và di động. Đam mê phát triển các giải pháp phần mềm có khả năng mở rộng, hiệu quả và thân thiện với người dùng; đồng thời không ngừng tìm hiểu công nghệ mới và nâng cao kỹ năng chuyên môn.',
     contactButton: 'Liên hệ với tôi',
     resume: 'Tải CV',
@@ -99,7 +99,7 @@ document.addEventListener('DOMContentLoaded', () => {
     document.querySelector('#contact .container > p').textContent = isVi ? vi.contactLead : 'Feel free to reach out for collaborations or just a friendly hello';
     contactHeadings.forEach((x,i) => { const key = originalContactHeadings[i].replace(/^[^A-Za-z]+/,'').trim(); const map = {Email:'Email',Phone:'Điện thoại',Address:'Địa chỉ'}; x.innerHTML = isVi ? originalContactHeadings[i].replace(key, map[key] || key) : originalContactHeadings[i]; });
     footerPs.forEach((x,i) => x.innerHTML = isVi ? vi.footer[i] : originalFooter[i]);
-    document.querySelector('.role.typing').textContent = isVi ? vi.role : 'Full-Stack Developer';
+    document.querySelector('.role.typing').textContent = isVi ? vi.role : 'SOFTWARE ENGINEER | FULL-STACK DEVELOPMENT';
     button.textContent = isVi ? '🇬🇧 English' : '🇻🇳 Tiếng Việt';
     button.setAttribute('aria-label', isVi ? 'Switch to English' : 'Chuyển sang tiếng Việt');
     document.documentElement.lang = isVi ? 'vi' : 'en';
