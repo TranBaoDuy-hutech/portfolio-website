@@ -62,7 +62,7 @@ document.addEventListener('DOMContentLoaded', () => {
     intro: document.querySelector('.intro')?.innerHTML || '',
     hero: document.querySelector('#hero .hero-content > p.fs-5')?.innerHTML || '',
     about: document.querySelector('#about .col-lg-9 p')?.innerHTML || '',
-    role: document.querySelector('.role.typing')?.textContent || ''
+    role: document.querySelector('#hero .role')?.textContent || ''
   };
   const experienceCards = [...document.querySelectorAll('.experience-card')];
   const originalExpTitles = experienceCards.map(c => c.querySelector('h3')?.textContent || '');
@@ -99,7 +99,8 @@ document.addEventListener('DOMContentLoaded', () => {
     document.querySelector('#contact .container > p').textContent = isVi ? vi.contactLead : 'Feel free to reach out for collaborations or just a friendly hello';
     contactHeadings.forEach((x,i) => { const key = originalContactHeadings[i].replace(/^[^A-Za-z]+/,'').trim(); const map = {Email:'Email',Phone:'Điện thoại',Address:'Địa chỉ'}; x.innerHTML = isVi ? originalContactHeadings[i].replace(key, map[key] || key) : originalContactHeadings[i]; });
     footerPs.forEach((x,i) => x.innerHTML = isVi ? vi.footer[i] : originalFooter[i]);
-    document.querySelector('.role.typing').textContent = isVi ? vi.role : 'SOFTWARE ENGINEER | FULL-STACK DEVELOPMENT';
+    const roleElement = document.querySelector('#hero .role');
+    if (roleElement) roleElement.textContent = isVi ? vi.role : 'SOFTWARE ENGINEER | FULL-STACK DEVELOPMENT';
     button.textContent = isVi ? '🇬🇧 English' : '🇻🇳 Tiếng Việt';
     button.setAttribute('aria-label', isVi ? 'Switch to English' : 'Chuyển sang tiếng Việt');
     document.documentElement.lang = isVi ? 'vi' : 'en';

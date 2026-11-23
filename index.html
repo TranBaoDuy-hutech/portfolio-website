@@ -287,28 +287,16 @@
       animation: fadeInUp 1s ease-out 0.2s both;
     }
 
-    .role.typing {
+    .role {
       font-size: 1.8rem;
       color: var(--accent-color);
       font-weight: 700;
       margin-bottom: 30px;
       display: inline-block;
-      border-right: 3px solid var(--accent-color);
-      animation: blink-caret 0.75s step-end infinite, fadeInUp 1s ease-out 0.4s both;
+      animation: fadeInUp 1s ease-out 0.4s both;
       min-height: 2.5rem;
     }
 
-    @keyframes blink-caret {
-
-      from,
-      to {
-        border-color: transparent;
-      }
-
-      50% {
-        border-color: var(--accent-color);
-      }
-    }
 
     .description {
       font-size: 1.1rem;
@@ -999,7 +987,7 @@
         font-size: 2rem;
       }
 
-      .role.typing {
+      .role {
         font-size: 1.2rem;
       }
 
@@ -1023,7 +1011,7 @@
         font-size: 1.6rem;
       }
 
-      .role.typing {
+      .role {
         font-size: 1rem;
       }
 
@@ -1070,7 +1058,7 @@
       <div class="hero-content">
         <p class="intro">Hello, I'm</p>
         <h1>Tran Bao Duy</h1>
-        <h2 class="role typing"></h2>
+        <h2 class="role"></h2>
         <p class="text-center fs-5">
           An <strong>Information Technology Engineer specializing in Software Engineering from HUTECH</strong>, focused on
           <strong>Full-Stack Development</strong> with hands-on experience in building web and mobile applications.
@@ -1852,31 +1840,11 @@
         });
       });
 
-      // Typing effect for role
-      const text = "SOFTWARE ENGINEER | FULL-STACK DEVELOPMENT";
-      const typingElement = document.querySelector(".role.typing");
-      let index = 0;
-
-      function type() {
-        if (index < text.length) {
-          typingElement.textContent += text.charAt(index);
-          index++;
-          setTimeout(type, 100);
-        } else {
-          setTimeout(() => {
-            typingElement.textContent = "";
-            index = 0;
-            type();
-          }, 2000);
-        }
-      }
-
       // Page fade-in
       document.body.style.opacity = '0';
       setTimeout(() => {
         document.body.style.transition = 'opacity 0.5s ease';
         document.body.style.opacity = '1';
-        type(); // Start typing after fade-in
       }, 100);
 
     });
